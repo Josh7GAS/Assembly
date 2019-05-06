@@ -1,0 +1,28 @@
+Questão 1:
+o que significam as flags CF, AF, ZF, OF, SF?
+
+INTRODUCTION-
+
+The status flags (bits 0, 2, 4, 6, 7, and 11) of the EFLAGS register indicate the results of arithmetic instructions, such as the ADD, SUB, MUL, and DIV instructions. The status flag functions are:
+
+S - Status Flag
+C - Control Flag
+X - System Flag
+
+CF=Carry Flag.(bit 0)
+Set if an arithmetic operation generates a carry or a borrow out of the mostsignificant bit of the result; cleared otherwise. This flag indicates an overflow codition for unsigned-integer arithmetic. It is also used in mutiple-precision arithmetic.
+
+PF=Party Flag.(bit 2)
+Set if the least-significant byteof the result contains an even number of 1 bits; cleared otherwise.
+
+AF=Auxiliary Carry Flag.(bit4)
+Set if an arithmetic operation genarates a carry or a borrow out of bit 3 of the result; cleared otherwise. This flag is used in binary-coded decimal (BCD) arithmetic.
+
+ZF=Zero Flag.(bit 6)
+Set if the result is zero; cleared otherwise.
+
+SF= Sign Flag.(bit 7)
+Set equal to the most-significant it of the result, which i the sign bit of a signed integer. (0 indicates a positive value and 1 indicates a negative value.)
+OF=Overflow Flag.(bit 11)
+Set if the integer result is too large a positive number or too small a negative number (excluding the sign-bit) to fit in the destination operand; cleared otherwise. This flag indicates an overflow condition for signed-integer (Two's complement) arithmetic.
+SF=Sign Flag
