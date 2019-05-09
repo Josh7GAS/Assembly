@@ -23,6 +23,6 @@ Set if the result is zero; cleared otherwise.
 
 SF= Sign Flag.(bit 7)
 Set equal to the most-significant it of the result, which i the sign bit of a signed integer. (0 indicates a positive value and 1 indicates a negative value.)
+
 OF=Overflow Flag.(bit 11)
 Set if the integer result is too large a positive number or too small a negative number (excluding the sign-bit) to fit in the destination operand; cleared otherwise. This flag indicates an overflow condition for signed-integer (Two's complement) arithmetic.
-SF=Sign Flag
