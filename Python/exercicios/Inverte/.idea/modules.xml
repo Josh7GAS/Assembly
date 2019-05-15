@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Inverte.iml" filepath="$PROJECT_DIR$/.idea/Inverte.iml" />
+      <module fileurl="file://$USER_HOME$/Oficina/Python/exercicios/.idea/Python.iml" filepath="$USER_HOME$/Oficina/Python/exercicios/.idea/Python.iml" />
+    </modules>
+  </component>
+</project>
