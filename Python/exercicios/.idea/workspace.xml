@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e767203e-ead8-4f21-a8ca-653284ba4bf0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/curso jclp/Tupla_dicionarios_conjuntosJLCP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso jclp/funcoes_metodos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso jclp/lista2JLCP.py" beforeDir="false" afterPath="$PROJECT_DIR$/curso jclp/lista2JLCP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso jclp/Tupla_dicionarios_conjuntosJLCP.py" beforeDir="false" afterPath="$PROJECT_DIR$/curso jclp/Tupla_dicionarios_conjuntosJLCP.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,31 +21,9 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/curso jclp/input.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/curso jclp/lista2JLCP.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/curso jclp/Tupla_dicionarios_conjuntosJLCP.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/curso jclp/entrada_e_saida_de_arquivos.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -99,14 +79,15 @@
         <option value="$PROJECT_DIR$/curso jclp/input.py" />
         <option value="$PROJECT_DIR$/curso jclp/lista2JLCP.py" />
         <option value="$PROJECT_DIR$/curso jclp/Tupla_dicionarios_conjuntosJLCP.py" />
+        <option value="$PROJECT_DIR$/curso jclp/funcoes_metodos.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1366" />
-    <option name="y" value="-2" />
-    <option name="width" value="1600" />
-    <option name="height" value="902" />
+    <option name="x" value="229" />
+    <option name="y" value="119" />
+    <option name="width" value="975" />
+    <option name="height" value="557" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -139,7 +120,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,7 +134,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Tupla_dicionarios_conjuntosJLCP">
+  <component name="RunManager" selected="Python.funcoes_metodos">
     <configuration name="Tupla_dicionarios_conjuntosJLCP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,20 +220,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="input" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="funcoes_metodos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/curso jclp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/curso jclp/input.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/curso jclp/funcoes_metodos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,6 +243,9 @@
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/curso jclp" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -284,6 +265,9 @@
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/curso jclp" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -301,11 +285,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.funcoes_metodos" />
         <item itemvalue="Python.Tupla_dicionarios_conjuntosJLCP" />
         <item itemvalue="Python.lista2JLCP" />
         <item itemvalue="Python.listaJLCP" />
         <item itemvalue="Python.condicoenais1" />
-        <item itemvalue="Python.input" />
       </list>
     </recent_temporary>
   </component>
@@ -330,9 +314,10 @@
     <option name="totallyTimeSpent" value="29266000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-2" width="1600" height="902" extended-state="6" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15028535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15243416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -347,7 +332,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32899022" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.31435964" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.31433225" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -477,10 +462,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/curso jclp/Tupla_dicionarios_conjuntosJLCP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="276">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curso jclp/funcoes_metodos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curso jclp/entrada_e_saida_de_arquivos.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

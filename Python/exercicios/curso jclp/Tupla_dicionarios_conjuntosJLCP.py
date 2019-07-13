@@ -1,10 +1,38 @@
-minha_tupla = ()
-meu_dicionario = {}
-meu_conjunto = set()
+minha_tupla = () #Tupla vazia
+meu_dicionario = {} #Dicionario Vazio
+meu_conjunto = set() #Conjunto Vazio
 
-minha_tupla = ('Robert', 'Pdero', 'Paulo')
+minha_tupla = ('Robert', 'Pedro', 'Paulo')
 print(minha_tupla)
 print(minha_tupla[1])
 for nome in minha_tupla:
     print(nome)
 print('')
+
+
+#Dicionario
+print('Dicionario ')
+meu_dicionario = {'nome': 'José', 'idade': 27}
+print(meu_dicionario['nome'])
+print(meu_dicionario ['idade'])
+meu_dicionario['idade'] = 28
+print(meu_dicionario['idade'])
+meu_dicionario['status'] = 'Ativo'
+print(meu_dicionario)
+lista_notas = [7.8, 8.4, 8.7, 4.5]
+meu_dicionario['notas'] = lista_notas
+print(meu_dicionario)
+print(meu_dicionario ['notas'])
+
+
+#Conjuntos
+
+print('Conjunto')
+nomes = ['Robert','Pedro', 'Paulo', 'Robert'] #Lista
+print(nomes)
+meu_conjunto = set()
+for nome in nomes:
+    meu_conjunto.add(nome)
+print(meu_conjunto)
+
+
