@@ -1,7 +1,12 @@
 import csv
 
-arquivo = open('documento.csv', 'w', newline='', encoding='utf-8')
-write = csv.writer(arquivo, delimiter = ';')
+try:
+    arquivo = open('documento.csv', 'w', newline='', encoding='utf-8')
+    write = csv.writer(arquivo, delimiter = ';')
+except Exception as err:
+    print('Não foi possivel Abrir e escrever o arquivo')
+    print('Erro'.format(err))
+
 cabecalho = ['Nome', 'Idade', 'Situacao']
 write.writerow(cabecalho)
 
