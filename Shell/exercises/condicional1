@@ -1,0 +1,11 @@
+#!/bin/bash
+read N
+ if [[ ${N} -le 0 ]]
+
+ then 
+    V=$((N*-1))
+    echo "${V}"
+    
+else 
+    echo ${N}
+fi

@@ -1,0 +1,4 @@
+#!/bin/bash
+touch haduoken
+TEXTO="eae cachorro"
+echo $TEXTO >> ~/haduoken

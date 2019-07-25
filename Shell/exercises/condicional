@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "me de duas variáveis"
+read A
+read B
+
+if [[ ${A} -ge ${B} ]]
+
+then
+    echo "Variavel A: "${A}" é maior que B: ${B}"
+    
+elif [[ ${A} -le ${B} ]]
+
+then 
+    echo "Variável B: " ${B} " é maior que várivel A: " ${A}
+fi
+
+
