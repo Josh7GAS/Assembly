@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "changing to work enviroment"
 
-OFIC= /mnt/c/Users/joshu/Oficina
-cd ${OFIC}
+cd ~/Oficina
+
+#cd ${OFIC}
