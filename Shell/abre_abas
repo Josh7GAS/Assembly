@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PAGINAS=( https://emailbr.la.logicalis.com/owa/#path=/mail https://mail.google.com/mail/u/0/#inbox https://drive.google.com/drive/my-drive http://maas-backend.nubeliu.com/zabbix.php?action=dashboard.view&dashboardid=4 https://nubeliu.zendesk.com/agent/filters/49263516 https://logicalisconnected.jiveon.com/community/logicalis-latam-intranet/intranetbr https://logicalisconnected.jiveon.com/community/logicalis-latam-intranet/intranetbr https://console.cloud.google.com/compute/instancesDetail/zones/southamerica-east1-c/instances/wazuh-teste-webserver?project=managed-services-241418&organizationId=5812290674 https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJMOATPLHVSJ563XQ&X-Amz-Date=2019-08-01T13%3A04%3A46.941Z&X-Amz-Signature=81dd26f016b9ec062617589001b6442a4dd2c85a1091b88c023eae8f4a0dce50&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23 https://r2d2.la.logicalis.com https://logicalislatam.sabacloud.com/Saba/Web_spf/NA1PRD0099/local https://www.redhat.com/wapps/ugc/protected/account.html https://optimal.service-now.com/nav_to.do?uri=%2Fhome.do )
+
+
+for i in ${PAGINAS}
+do
+	google-chrome ${PAGINAS}
+
+done
+
