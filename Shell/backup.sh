@@ -15,7 +15,7 @@ then
 else
 
     # COMPACTA TODO O CONTEÚDO DAS PASTAS DENTRO DE HOME/JOSHUA
-    tar -zcvf  /backup/backupjoshua.tar.gz /home/joshua 
+    tar -zcvf  /dev/disk/by-uuid/3221-7431/backup/backupjoshua.tar.gz /home/joshua 
 
     # REGISTRA QUE O BACKUP FOI FEITO COM SUCESSO
     echo “Backup realizado com sucesso em: ” >> /var/log/backup.log
