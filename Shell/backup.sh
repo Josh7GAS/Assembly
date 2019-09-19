@@ -3,7 +3,7 @@
 # SCRIPT BACKUP SERVIDOR DADOS  #
 #################################
 
-mount /dev/disk/by-uuid/3221-7431 /backup 
+mount /media/joshua/BB8 ext4 defaults 0 0
 mounted=`mount | grep /backup`
 
 #Se a montagem não estiver Up então Fecha, Caso contrário realiza o Backup
@@ -15,7 +15,7 @@ then
 else
 
     # COMPACTA TODO O CONTEÚDO DAS PASTAS DENTRO DE HOME/JOSHUA
-    tar -zcvf  /dev/disk/by-uuid/3221-7431/backup/backupjoshua.tar.gz /home/joshua 
+    tar -zcvf  /media/joshua/BB8/backup/backupjoshua.tar.gz /home/joshua 
 
     # REGISTRA QUE O BACKUP FOI FEITO COM SUCESSO
     echo “Backup realizado com sucesso em: ” >> /var/log/backup.log
