@@ -1,4 +1,4 @@
-package br.com.justnewcars.classe;
+package br.com.justnewcars.Veiculo;
 
 //<editor-fold defaultstate="collapsed" desc="imports...">
 //import ...

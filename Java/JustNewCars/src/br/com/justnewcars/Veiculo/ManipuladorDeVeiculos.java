@@ -1,4 +1,4 @@
-package br.com.justnewcars.classe;
+package br.com.justnewcars.Veiculo;
 
 //<editor-fold defaultstate="collapsed" desc="imports...">
 import java.util.List;
@@ -98,21 +98,50 @@ public class ManipuladorDeVeiculos {
             }
             return false;
         }
-        
+
         return false;
     }
-    
-    public boolean removeVeiculo(Veiculo veiculoParaRemover){
-    return veiculos.remove(veiculoParaRemover);
+
+    public boolean removeVeiculo(Veiculo veiculoParaRemover) {
+        return veiculos.remove(veiculoParaRemover);
     }
     //</editor-fold>
 
     //</editor-fold>
-
     public void addVeiculo(Veiculo veiculo1, Veiculo veiculo2, Veiculo veiculo20, Veiculo veiculo3) {
     }
+
+    public void updateVeiculo(int indiceVeiculo, Veiculo novoVeiculo) {
+        if (lengthOfVeiculos() > 0 && indiceVeiculo >= 0 && indiceVeiculo < lengthOfVeiculos()) {
+            removeVeiculo(indiceVeiculo);
+            veiculos.add(indiceVeiculo, novoVeiculo);
+
+        }
     
-    public void updateVeiculo(int indiceVeiculo, Veiculo novoVeiculo){
-    if()
     }
+
+    public Veiculo searchFirst(String modelo) {
+        for (Veiculo elementoAtual : veiculos) {
+            if (elementoAtual.getModelo().equals(modelo)) {
+                return elementoAtual;
+             
+            }
+        }
+        return null;
+    }
+    
+    public List<Veiculo> searchAll(String modelo){
+    List<Veiculo> encontrados = new ArrayList<>();
+    
+        for (Veiculo elementoAtual : encontrados) {
+            encontrados.add(elementoAtual);            
+        }
+        
+        if (encontrados.size() == 0) {
+            return null;
+        }
+        
+        return encontrados;
+    }
+
 }//class
