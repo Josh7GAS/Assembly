@@ -3,12 +3,15 @@ package Canoa;
 public class Rio {
 
 	boolean [] rio;
+	int tamanhoRio;
+	Canoa canoa;
 
 
-	public Rio(int tamanho) {
+	public Rio(int tamanhoRio, Canoa canoa) {
 		super();
 
-		this.rio = new boolean[tamanho];
+		this.rio = new boolean[tamanhoRio];
+		this.canoa = canoa;
 
 	}
 
@@ -23,22 +26,22 @@ public class Rio {
 	}
 
 	
-		public boolean[] moverBarco(int x) {
-			Canoa teste = new Canoa(4);
-			if (x < teste.getCanoa().length|| x > teste.getCanoa().length) {
-	
-				System.out.println("Posição Invalida");
-	
-			}else {
-	
-				for (int count = x; count < teste.getCanoa().length ; count++) {
-					getRio()[count]=true;
-				}
-	
-			}return getRio();
-	
-		}
-		
+//		public boolean[] moverBarco(int x) {
+//			Canoa teste = new Canoa(4);
+//			if (x < teste.getCanoa().length|| x > teste.getCanoa().length) {
+//	
+//				System.out.println("Posição Invalida");
+//	
+//			}else {
+//	
+//				for (int count = x; count < teste.getCanoa().length ; count++) {
+//					getRio()[count]=true;
+//				}
+//	
+//			}return getRio();
+//	
+//		}
+//		
 
 	//	void receberTiro(int x) {
 	//		if (x<tamanho || x>tamanho) {

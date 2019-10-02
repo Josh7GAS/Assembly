@@ -1,12 +1,22 @@
 package Canoa;
 
 public class Canoa {
-	
-	boolean [] canoa;
 
-	public Canoa(int tamanho) {
+	String nomeCanoa;
+	boolean [] canoa;
+	int tamanhoCanoa;
+
+	public Canoa(String nomeCanoa, int tamanhoCanoa) {
 		super();
-		this.canoa = new boolean[tamanho];
+		this.canoa = new boolean[tamanhoCanoa];
+	}
+
+	public String getNomeCanoa() {
+		return nomeCanoa;
+	}
+
+	public void setNomeCanoa(String nomeCanoa) {
+		this.nomeCanoa = nomeCanoa;
 	}
 
 	public boolean[] getCanoa() {
@@ -17,7 +27,14 @@ public class Canoa {
 		this.canoa = canoa;
 	}
 
-	
+	public int getTamanhoCanoa() {
+		return tamanhoCanoa;
+	}
+
+
+
+
+
 
 
 
