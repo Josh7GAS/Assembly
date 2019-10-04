@@ -34,7 +34,7 @@ public class Jogador {
 
 	public int getTamanhoCanoaFromCanoa() {
 		return canoa.tamanhoCanoa;
-		
+		i
 		 
 	}
 
