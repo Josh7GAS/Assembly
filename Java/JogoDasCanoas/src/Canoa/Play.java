@@ -8,8 +8,7 @@ public class Play {
 		//prepara para receber os jogadores  
 		Jogador[] listaJogadores = new Jogador[2];
 
-		//		do {
-		//cria os dois players
+		
 		listaJogadores[0] = new Jogador("Joshua", "zebulom", 4, 10);
 		listaJogadores[1] = new Jogador("Joao", "naftali", 4, 10);
 		
