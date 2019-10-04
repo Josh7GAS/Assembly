@@ -3,13 +3,14 @@ package Canoa;
 public class Jogador {
 	private String nomeJogador;
 	private Rio rio;
+	Canoa canoa;
 	
 	
 	public Jogador(String nomeJogador, String nomeCanoa, int tamanhoRio, int tamanhoCanoa ) {
 		
 		this.nomeJogador= nomeJogador;
-		Canoa canoa = new Canoa("zebulom", 4);
-		rio = new Rio(10, getTamanhoCanoa());
+		this.canoa = new Canoa("zebulom", 4);
+		rio = new Rio(10, canoa);
 		
 	}
 
@@ -33,8 +34,10 @@ public class Jogador {
 		this.rio = rio;
 	}
 	
-	public Canoa getTamanhoCanoa() {
-		return getTamanhoCanoa();
+	public int getTamanhoCanoaFromCanoa() {
+		return canoa.tamanhoCanoa;
+		
+		 
 	}
 	
 

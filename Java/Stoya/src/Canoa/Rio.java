@@ -47,7 +47,7 @@ public class Rio {
 		return false;
 	}
 
-	
+
 	//AtiraNaCanoa é um metodo de atirar no ambiente do jogo e então o metodo valida o tiro, se foi dentro ou for do barco,
 	//em caso de ter sido dentro do barco reduzir o tamanhoCanoa.
 	public boolean atiraNaCanoa(int tiro){
@@ -55,17 +55,38 @@ public class Rio {
 		if(tiro>=0 && tiro <(tamanhoRio)){
 			//se o tiro for dentro dee um elemento true, significa que está acertando o barco, então eu diminuo o tamanho do rio
 			if (rio[tiro]==true) {
-				
+
 				canoa.tamanhoCanoa=canoa.getTamanhoCanoa()-1;
-				
+
 			} 
-			
+
 		}else {
-			
+
 			return false;
 		}
-		
+
 		return rio[tiro];
 	}
 
+	public boolean canoaEstaDestruida() {
+		Boolean estaDestruida=false;
+		
+		for (boolean cadaIndex : rio) {
+			if (cadaIndex==false) {
+
+				estaDestruida=true;
+				
+			}else {
+				
+				return estaDestruida;
+				
+			}
+			
+		}return estaDestruida;
+		
+	}
+
+
 }
+
+
