@@ -1,5 +1,7 @@
 package Canoa;
 
+import java.util.Arrays;
+
 public class Canoa {
 
 	String nomeCanoa;
@@ -29,6 +31,12 @@ public class Canoa {
 
 	public int getTamanhoCanoa() {
 		return tamanhoCanoa;
+	}
+
+	@Override
+	public String toString() {
+		return "Canoa [nomeCanoa=" + nomeCanoa + ", canoa=" + Arrays.toString(canoa) + ", tamanhoCanoa=" + tamanhoCanoa
+				+ "]";
 	}
 
 

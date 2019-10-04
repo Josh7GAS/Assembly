@@ -1,5 +1,7 @@
 package Canoa;
 
+import java.util.Arrays;
+
 public class Rio {
 
 	boolean[] rio;
@@ -22,6 +24,14 @@ public class Rio {
 		this.rio = rio;
 	}
 
+	public int getTamanhoRio() {
+		return tamanhoRio;
+	}
+
+	public void setTamanhoRio(int tamanhoRio) {
+		this.tamanhoRio=tamanhoRio;
+	}
+
 	public int getTamanhoCanoa() {
 		return canoa.tamanhoCanoa;
 	}
@@ -30,14 +40,21 @@ public class Rio {
 		// 0 - tamahhoRio
 		//ou melhor=> tamanhoRio - tamanhoCanoa
 		if (posicaoEscolhida >= 0 && posicaoEscolhida < (tamanhoRio - canoa.tamanhoCanoa)) {
+
 			int contCanoa = 0;
 			for (int contRio = 0; contRio < tamanhoRio; contRio++) {
+
 				if (contRio >= posicaoEscolhida && contRio < (posicaoEscolhida + canoa.tamanhoCanoa)) {
+
 					rio[contRio] = canoa.getCanoa()[contCanoa];
 					contCanoa++;
+
 				}
+
 				else{
+
 					rio[contRio] = false;
+
 				}
 			}
 
@@ -70,20 +87,25 @@ public class Rio {
 
 	public boolean canoaEstaDestruida() {
 		Boolean estaDestruida=false;
-		
+
 		for (boolean cadaIndex : rio) {
 			if (cadaIndex==false) {
 
 				estaDestruida=true;
-				
+
 			}else {
-				
+
 				return estaDestruida;
-				
+
 			}
-			
+
 		}return estaDestruida;
-		
+
+	}
+
+	@Override
+	public String toString() {
+		return "Rio [rio=" + Arrays.toString(rio) + ", tamanhoRio=" + getTamanhoRio() + "]";
 	}
 
 

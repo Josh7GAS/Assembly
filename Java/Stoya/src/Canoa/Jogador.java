@@ -3,7 +3,7 @@ package Canoa;
 public class Jogador {
 	private String nomeJogador;
 	private Rio rio;
-	Canoa canoa;
+	private Canoa canoa;
 	
 	
 	public Jogador(String nomeJogador, String nomeCanoa, int tamanhoRio, int tamanhoCanoa ) {
@@ -26,20 +26,26 @@ public class Jogador {
 
 
 	public Rio getRio() {
+		
+		
 		return rio;
 	}
 
 
-	public void setRio(Rio rio) {
-		this.rio = rio;
-	}
-	
 	public int getTamanhoCanoaFromCanoa() {
 		return canoa.tamanhoCanoa;
 		
 		 
 	}
+
+
+	@Override
+	public String toString() {
+		
+		return "Jogador [nomeJogador=" + nomeJogador + ", rio=" + getRio() + ", canoa=" + canoa + "]";
+	}
 	
 
+	
 		
 }
