@@ -36,5 +36,7 @@ public class Jogador {
 	public Canoa getTamanhoCanoa() {
 		return getTamanhoCanoa();
 	}
+	
+
 		
 }
