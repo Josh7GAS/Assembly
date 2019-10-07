@@ -17,25 +17,20 @@ public class Canoa {
 		return nomeCanoa;
 	}
 
-	public void setNomeCanoa(String nomeCanoa) {
-		this.nomeCanoa = nomeCanoa;
-	}
-
 	public boolean[] getCanoa() {
+		for (int count = tamanhoCanoa; count < tamanhoCanoa; count++) {
+			canoa[count]=true;
+		}
 		return canoa;
 	}
 
-	public void setCanoa(boolean[] canoa) {
-		this.canoa = canoa;
-	}
-
 	public int getTamanhoCanoa() {
-		return tamanhoCanoa;
+		return canoa.length;
 	}
 
 	@Override
 	public String toString() {
-		return "Canoa [nomeCanoa=" + nomeCanoa + ", canoa=" + Arrays.toString(canoa) + ", tamanhoCanoa=" + tamanhoCanoa
+		return "Canoa [nomeCanoa=" + getNomeCanoa() + ", canoa=" + Arrays.toString(getCanoa()) + ", tamanhoCanoa=" + getTamanhoCanoa()
 				+ "]";
 	}
 

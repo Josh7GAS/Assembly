@@ -4,14 +4,14 @@ public class Jogador {
 	private String nomeJogador;
 	private Rio rio;
 	private Canoa canoa;
-	
-	
+
+
 	public Jogador(String nomeJogador, String nomeCanoa, int tamanhoRio, int tamanhoCanoa ) {
-		
+
 		this.nomeJogador= nomeJogador;
-		this.canoa = new Canoa("zebulom", 4);
-		rio = new Rio(10, canoa);
-		
+		rio = new Rio(tamanhoRio, canoa);
+		this.canoa = new Canoa(nomeCanoa, tamanhoCanoa);
+
 	}
 
 
@@ -26,26 +26,26 @@ public class Jogador {
 
 
 	public Rio getRio() {
-		
-		
+
+
 		return rio;
 	}
 
 
-	public int getTamanhoCanoaFromCanoa() {
-		return canoa.tamanhoCanoa;
-		
-		 
+	public Canoa getCanoa() {
+		return canoa;
 	}
 
 
 	@Override
 	public String toString() {
-		
-		return "Jogador [nomeJogador=" + nomeJogador + ", rio=" + getRio() + ", canoa=" + canoa + "]";
+		return "Jogador [nomeJogador=" + nomeJogador + ", rio=" + getRio() + ", canoa=" + getCanoa() + "]";
 	}
-	
 
-	
-		
+
+
+
+
+
+
 }

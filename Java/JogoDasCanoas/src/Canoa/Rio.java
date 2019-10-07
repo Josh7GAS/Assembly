@@ -25,16 +25,9 @@ public class Rio {
 	}
 
 	public int getTamanhoRio() {
-		return tamanhoRio;
+		return rio.length;
 	}
 
-	public void setTamanhoRio(int tamanhoRio) {
-		this.tamanhoRio=tamanhoRio;
-	}
-
-	public int getTamanhoCanoa() {
-		return canoa.tamanhoCanoa;
-	}
 
 	public boolean moveBarco(int posicaoEscolhida) {
 		// 0 - tamahhoRio

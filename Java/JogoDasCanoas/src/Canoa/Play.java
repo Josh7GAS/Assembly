@@ -9,12 +9,12 @@ public class Play {
 		Jogador[] listaJogadores = new Jogador[2];
 
 		
-		listaJogadores[0] = new Jogador("Joshua", "zebulom", 4, 10);
-		listaJogadores[1] = new Jogador("Joao", "naftali", 4, 10);
+		listaJogadores[0] = new Jogador("Joshua", "zebulom", 10, 4);
+	
 		
 		
 
-		System.out.println(listaJogadores[0].getRio().tamanhoRio);
+		System.out.println("Olha só " + listaJogadores[0]);
 
 	}
 }
