@@ -10,6 +10,7 @@ public class Canoa {
 
 	public Canoa(String nomeCanoa, int tamanhoCanoa) {
 		super();
+		this.nomeCanoa = nomeCanoa;
 		this.canoa = new boolean[tamanhoCanoa];
 	}
 
@@ -18,7 +19,7 @@ public class Canoa {
 	}
 
 	public boolean[] getCanoa() {
-		for (int count = tamanhoCanoa; count < tamanhoCanoa; count++) {
+		for (int count = 0; count < canoa.length; count++) {
 			canoa[count]=true;
 		}
 		return canoa;

@@ -19,11 +19,9 @@ public class Jogador {
 		return nomeJogador;
 	}
 
-
 	public void setNomeJogador(String nomeJogador) {
 		this.nomeJogador = nomeJogador;
 	}
-
 
 	public Rio getRio() {
 
