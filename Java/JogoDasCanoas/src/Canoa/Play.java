@@ -15,6 +15,9 @@ public class Play {
 		
 
 		System.out.println("Olha só " + listaJogadores[0]);
+		
+		listaJogadores[0].getRio().moveBarco(6);
+		System.out.println(listaJogadores[0].getRio().toString());
 
 	}
 }

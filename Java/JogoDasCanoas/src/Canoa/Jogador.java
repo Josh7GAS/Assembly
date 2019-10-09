@@ -9,8 +9,9 @@ public class Jogador {
 	public Jogador(String nomeJogador, String nomeCanoa, int tamanhoRio, int tamanhoCanoa ) {
 
 		this.nomeJogador= nomeJogador;
-		rio = new Rio(tamanhoRio, canoa);
 		this.canoa = new Canoa(nomeCanoa, tamanhoCanoa);
+		rio = new Rio(tamanhoRio, canoa);
+		
 
 	}
 

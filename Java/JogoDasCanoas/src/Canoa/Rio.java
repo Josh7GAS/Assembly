@@ -11,8 +11,9 @@ public class Rio {
 	public Rio(int tamanhoRio, Canoa canoa) {
 		super();
 
-		this.rio = new boolean[tamanhoRio];
 		this.canoa = canoa;
+		this.rio = new boolean[tamanhoRio];
+		
 
 	}
 
@@ -28,18 +29,21 @@ public class Rio {
 		return rio.length;
 	}
 
+	public Canoa getCanoa() {
+		return canoa;
+	}
 
 	public boolean moveBarco(int posicaoEscolhida) {
 		// 0 - tamahhoRio
 		//ou melhor=> tamanhoRio - tamanhoCanoa
-		if (posicaoEscolhida >= 0 && posicaoEscolhida < (tamanhoRio - canoa.tamanhoCanoa)) {
+		if (posicaoEscolhida >= 0 && posicaoEscolhida < (getTamanhoRio() - getCanoa().getTamanhoCanoa() )) {
 
 			int contCanoa = 0;
-			for (int contRio = 0; contRio < tamanhoRio; contRio++) {
+			for (int contRio = 0; contRio < getTamanhoRio(); contRio++) {
 
-				if (contRio >= posicaoEscolhida && contRio < (posicaoEscolhida + canoa.tamanhoCanoa)) {
+				if (contRio >= posicaoEscolhida && contRio < (posicaoEscolhida + getCanoa().getTamanhoCanoa())) {
 
-					rio[contRio] = canoa.getCanoa()[contCanoa];
+					rio[contRio] = getCanoa().getCanoa()[contCanoa];
 					contCanoa++;
 
 				}
