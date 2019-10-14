@@ -58,7 +58,7 @@ public class Play {
             //Exibindo Resultados do turno atual
             println(partida);
             
-        } while (!partida.getRioFromPartida().canoaEstaDestruida());
+        } while (!partida.terminou());
         
         if (partida.houveEmpate()) {
             println("EMPATOU!!!!!");
