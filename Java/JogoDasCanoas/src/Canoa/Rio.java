@@ -13,7 +13,7 @@ public class Rio {
 
 		this.canoa = canoa;
 		this.rio = new boolean[tamanhoRio];
-		
+
 
 	}
 
@@ -33,10 +33,10 @@ public class Rio {
 		return canoa;
 	}
 
-	public boolean moveBarco(int posicaoEscolhida) {
+	public boolean moveBarco(int jogadorEscolhido, int posicaoEscolhida) {
 		// 0 - tamahhoRio
 		//ou melhor=> tamanhoRio - tamanhoCanoa
-		if (posicaoEscolhida >= 0 && posicaoEscolhida < (getTamanhoRio() - getCanoa().getTamanhoCanoa() )) {
+		while(posicaoEscolhida >= 0 && posicaoEscolhida < (getTamanhoRio() - getCanoa().getTamanhoCanoa() )) {
 
 			int contCanoa = 0;
 			for (int contRio = 0; contRio < getTamanhoRio(); contRio++) {
@@ -56,13 +56,16 @@ public class Rio {
 			}
 
 			return true;
+			
 		}
+		
+		
 
 		return false;
 	}
 
 
-	
+
 	public boolean atiraNaCanoa(int tiro){
 		//se o tiro for maior, igual a 0 e menor que o tamanho do Rio � um tiro valido.
 		if(tiro>=0 && tiro <(tamanhoRio)){
