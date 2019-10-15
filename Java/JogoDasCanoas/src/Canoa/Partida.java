@@ -48,30 +48,37 @@ public class Partida {
 		}
 	}
 
-	
-	
-	public boolean terminou() {
-		Boolean estaDestruida= false;
-
-		for(boolean cadaIndex : getRioFromPartida().getRio()) {
-			if(cadaIndex==false) {
-				estaDestruida=true;
-			}else {
-
-				return estaDestruida;
+	public Boolean terminou() {
+		int contCanoaDestruida = 0;
+		for (int count = 0; count < qtdJogadores; count++) {
+			if(listaJogadores[count].getRio().canoaEstaDestruida()) {
+				contCanoaDestruida++;
 			}
-
-		}return estaDestruida;
-
+		}
+		
+		return contCanoaDestruida == qtdJogadores || contCanoaDestruida == (qtdJogadores - 1);
 	}
-	
+
 	public boolean empatou() {
+		Boolean deuEmpate = false;
+
 		for (Jogador jogador : listaJogadores) {
-			if (jogador.getRio()) {
+			if (jogador.getRio().canoaEstaDestruida()==false) {
+
+				deuEmpate=true;
 				System.out.println("Empatou");
 			}
-		}	
+		}return deuEmpate;
 	}
 
-
+	public String alguemGanhou() {
+		
+		for (Jogador listaProcuraPeloGanhador : listaJogadores) {
+			
+			if (!listaProcuraPeloGanhador.getRio().canoaEstaDestruida()) {
+				
+				return listaProcuraPeloGanhador.getNomeJogador();
+			}
+		} return null;
+	}
 }

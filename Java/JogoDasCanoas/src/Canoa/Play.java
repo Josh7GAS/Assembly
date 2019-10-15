@@ -60,11 +60,11 @@ public class Play {
             
         } while (!partida.terminou());
         
-        if (partida.houveEmpate()) {
+        if (partida.empatou()) {
             println("EMPATOU!!!!!");
         }
         else{
-            println("PARABÉNS!!! " + partida.alguemGanhou().getNome());
+            println("PARABÉNS!!! " + partida.alguemGanhou());
         }
         
         System.out.println(partida);        

@@ -85,21 +85,14 @@ public class Rio {
 	}
 
 	public boolean canoaEstaDestruida() {
-		Boolean estaDestruida=false;
-
-		for (boolean cadaIndex : rio) {
-			if (cadaIndex==false) {
-
-				estaDestruida=true;
-
-			}else {
-
-				return estaDestruida;
-
+		for (boolean pedacoAtivo : rio) {
+			if (pedacoAtivo) {
+				return false;
 			}
 
-		}return estaDestruida;
-
+		}
+		
+		return true;
 	}
 	
 	
