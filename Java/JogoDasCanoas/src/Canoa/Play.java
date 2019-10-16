@@ -21,13 +21,13 @@ public class Play {
 		int indiceInimigoEscolhido = 0;
 		
 		Partida partida = new Partida();
-		
+	
 		for (int indice = 0; indice < qtdJogadores; indice++) {
             nomeJogador = readLineAsString("JOGADOR " + (indice + 1) + "\n\nQual é o seu nome? ");
             nomeCanoa = readLineAsString("JOGADOR " + (indice + 1) + "\n\nQual é nome da sua canoa? ");
             jogadorTemp = new Jogador(nomeJogador, nomeCanoa, tamanhoRio, tamanhoCanoa);
             partida.addJogador(jogadorTemp);
-        }
+        }	
 
 		do {            
             //MOVENDO CANOAS
