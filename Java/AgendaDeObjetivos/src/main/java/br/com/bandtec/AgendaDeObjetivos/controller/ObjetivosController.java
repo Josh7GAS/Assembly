@@ -1,4 +1,5 @@
-package br.com.bandtec.agendadeobjetivos.controller;
+package br.com.bandtec.AgendaDeObjetivos.controller;
+
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,39 +12,33 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.bandtec.agendadeobjetivos.domain.Impeditivo;
-import br.com.bandtec.agendadeobjetivos.domain.Objetivo;
-import br.com.bandtec.agendadeobjetivos.domain.TodosObjetivos;
+import br.com.bandtec.AgendaDeObjetivos.model.Objetivo;
+import br.com.bandtec.AgendaDeObjetivos.model.TodosObjetivos;
 
 @RestController
 public class ObjetivosController {
-
-	private final TodosObjetivos todosObjetivos;
+	private TodosObjetivos objetivos;
 	
 	@Autowired
 	public ObjetivosController(TodosObjetivos todosObjetivos) {
-		this.todosObjetivos = todosObjetivos;
-	}
-
-	@PostMapping("/objetivos")
-	public ResponseEntity<String> cadastrar(@RequestBody Objetivo objetivo) {
-		this.todosObjetivos.save(objetivo);
-		return ResponseEntity.ok("Sucesso");
-	}
-
-	@GetMapping("/objetivos/data/{data}")
-	public ResponseEntity<List<Objetivo>> ateAData(@PathVariable("data") String dataString){
-		LocalDate data = LocalDate.parse(dataString);
-		List<Objetivo> objetivos = todosObjetivos.ate(data);
-		if(objetivos.isEmpty()) return ResponseEntity.noContent().build();
-		return ResponseEntity.ok(objetivos);
+		this.objetivos = todosObjetivos;
 	}
 	
-	@PostMapping("/objetivos/{id}/impeditivos")
-	public ResponseEntity<String> associarImpeditivo(@PathVariable("id") Long objetivoId, @RequestBody Impeditivo impeditivo){
-		Objetivo objetivo = this.todosObjetivos.findById(objetivoId).get();
-		objetivo.adicionar(impeditivo);
-		this.todosObjetivos.save(objetivo);
-		return ResponseEntity.ok().build();
+	@PostMapping("/objetivos")
+	public ResponseEntity<String> cadastrarObjetivo(@RequestBody Objetivo objetivo) {
+		this.objetivos.save(objetivo);
+		return ResponseEntity.ok("Objetivo cadastrado com sucesso");
+	}
+	
+	@GetMapping("/objetivos/data/{data}")
+	public ResponseEntity<List<Objetivo>> buscarObjetivoPorData(@PathVariable("data") String dataProcurada) {
+		
+		LocalDate data = LocalDate.parse(dataProcurada);
+		List<Objetivo> objetivoData = objetivos.ate(data);
+		if(objetivoData.isEmpty()) {
+			return ResponseEntity.noContent().build(); //204 requisição feita com sucesso mas não foi encontrdo nada
+		}
+		
+		return ResponseEntity.ok(objetivoData);
 	}
 }

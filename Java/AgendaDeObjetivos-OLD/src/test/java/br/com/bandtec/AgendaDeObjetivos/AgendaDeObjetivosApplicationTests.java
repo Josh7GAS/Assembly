@@ -11,7 +11,6 @@ public class AgendaDeObjetivosApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		
 	}
 
 }

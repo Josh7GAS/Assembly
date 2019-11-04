@@ -8,6 +8,11 @@ public class AgendaDeObjetivosApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AgendaDeObjetivosApplication.class, args);
+		System.out.println(
+				"\n╔═══════════════════════════════════╗\n"
+				+ "║   ♠ SERVER READY FOR REST  ;)  ♦  ║\n"
+				+ "╚═══════════════════════════════════╝\n"
+		);
 	}
 
 }

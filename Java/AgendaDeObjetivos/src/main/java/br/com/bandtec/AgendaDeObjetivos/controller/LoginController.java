@@ -7,28 +7,42 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.bandtec.AgendaDeObjetivos.domain.Credenciais;
-import br.com.bandtec.AgendaDeObjetivos.domain.TodosUsuarios;
+import br.com.bandtec.AgendaDeObjetivos.model.Credenciais;
+//import br.com.bandtec.AgendaDeObjetivos.model.Credenciais;
+import br.com.bandtec.AgendaDeObjetivos.model.TodosUsuarios;
+import br.com.bandtec.AgendaDeObjetivos.model.Usuario;
 
 @RestController
-public class LoginController {
+public class LoginController{
 	
-	private TodosUsuarios listaUsuarios;
+	private TodosUsuarios usuarios;
 	
 	@Autowired
-	public LoginController(TodosUsuarios listaUsuarios) {
-		this.listaUsuarios = listaUsuarios;
-	}	
-		
-	@PostMapping("/login")
-	public ResponseEntity<String> validarLogin(@RequestBody Credenciais credendicais) {
-		if (listaUsuarios.existe(credendicais) != null) {
-			return ResponseEntity.ok("Login efetuado com sucesso");
-		}
-		
-		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Erro! Usuário ou senha inexistentes!!");
+	public LoginController(TodosUsuarios todosUsuarios) {
+		this.usuarios = todosUsuarios;
 	}
 	
+//	@PostMapping("/login")
+//	public ResponseEntity<String> validarLogin(@RequestBody Credenciais credencias) {
+//		if(credencias.getSenha().equals(credencias.getLogin())) {
+//			return ResponseEntity.ok("Login efetuado com sucesso");			
+//		} else {
+//			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("erro");
+//		}
+//	}
 	
+	@PostMapping("/login")
+	public ResponseEntity<String> validacaoLogin(@RequestBody Credenciais credenciais) {
+		Usuario usuarioAutenticado = usuarios.existe(credenciais);
+		if(usuarioAutenticado == null) {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuário não autenticado");
+		}
+		return ResponseEntity.ok("Usuário autenticado");
+	}
 	
+	@PostMapping("cadastrar")
+	public ResponseEntity<String> cadastrar(@RequestBody Usuario usuario) {
+		usuarios.save(usuario);
+		return ResponseEntity.ok("Cadastro realizado com sucesso");
+	}
 }
