@@ -11,8 +11,22 @@ function Background(props) {
     };
 
     return (
-        <img src={props.backgroundImage} style={bgStyle} />
+        <img src={props.imagemMarBackground} style={bgStyle} />
     );
 }
 
-export default Background;
+function MolduraBambu(props){
+    const bgStyle = {        
+        width: `calc(1300px)`, 
+        height: `calc(600px)`, 
+        top: 10 ,
+        left: 0,
+        position: 'absolute'        
+    };
+
+    return (
+    <img src={props.molduraBambuBackground} style={bgStyle} />
+    );
+}
+
+export {Background, MolduraBambu};
