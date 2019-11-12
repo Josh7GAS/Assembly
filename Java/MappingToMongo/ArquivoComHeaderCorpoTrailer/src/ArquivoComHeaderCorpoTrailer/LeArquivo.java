@@ -12,9 +12,14 @@ public class LeArquivo {
 		BufferedReader entrada = null;
 		String registro;
 		String tipoRegistro;
-		String curso, ra, nomeAluno, nomeDisciplina;
-		double media;
-		int qtdFalta, contRegistro=0;
+		String curso, nomeJogador, email, genero;
+		double idade;
+		int vitorias, contRegistro=0;
+		int empates;
+		int derrotas;
+		int moedas;
+		int tirosCertos;
+		int tirosRuins;
 		
 		// Abre o arquivo
 		try {
@@ -23,57 +28,62 @@ public class LeArquivo {
 			System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
 		}
 		
-		// Lê os registros do arquivo
+		// Lï¿½ os registros do arquivo
 		try {
-			// Lê um registro
+			// Lï¿½ um registro
 			registro = entrada.readLine();
 			
 			while (registro != null) {
-				// Obtém o tipo do registro
+				// Obtï¿½m o tipo do registro
 				tipoRegistro = registro.substring(0, 2);
 				
 				if (tipoRegistro.equals("00")) {
 					System.out.println("Header");
 					System.out.println("Tipo de arquivo: " + registro.substring(2, 6));
 					int periodoLetivo= Integer.parseInt(registro.substring(6,11));
-					System.out.println("Período letivo: " + periodoLetivo);
-					System.out.println("Data/hora de geração do arquivo: " + registro.substring(11,30));
-					System.out.println("Versão do layout: " + registro.substring(30,32));
+					System.out.println("Perï¿½odo letivo: " + periodoLetivo);
+					System.out.println("Data/hora de geraï¿½ï¿½o do arquivo: " + registro.substring(11,30));
+					System.out.println("Versï¿½o do layout: " + registro.substring(30,32));
 				}
 				else if (tipoRegistro.equals("01")) {
 					System.out.println("\nTrailer");
 					int qtdRegistro = Integer.parseInt(registro.substring(2,12));
 					if (qtdRegistro == contRegistro) {
-						System.out.println("Quantidade de registros gravados compatível com quantidade lida");
+						System.out.println("Quantidade de registros gravados compatï¿½vel com quantidade lida");
 					}	
 					else {	
-						System.out.println("Quantidade de registros gravados não confere com quantidade lida");
+						System.out.println("Quantidade de registros gravados nï¿½o confere com quantidade lida");
 					}
 				}
 				else if (tipoRegistro.contentEquals("02")) {
 					if (contRegistro == 0) {
 						System.out.println();
-						System.out.printf("%-5s %-8s %-50s %-40s %5s %6s\n", "CURSO","RA","NOME DO ALUNO","DISCIPLINA",
-								"MÉDIA", "FALTAS");
+						System.out.printf("%-5s %-50s %-40s %-2s %3s %9s %9s %9s %9s %9s %9s\n", "NÂ° PLAYER","NOME DO JOGADOR","EMAIL","GENERO",
+								"IDADE", "VITORIAS", "EMPATES", "DERROTAS","MOEDAS", "TIROS CERTOS", "TIROS RUINS");
 
 					}
 					
 					curso = registro.substring(2,7);
-					ra = registro.substring(7,15);
-					nomeAluno = registro.substring(15,65);
-					nomeDisciplina = registro.substring(65,105);
-					media = Double.parseDouble(registro.substring(105,110).replace(',','.'));
-					qtdFalta = Integer.parseInt(registro.substring(110,113));
+					nomeJogador = registro.substring(7,57);
+					email = registro.substring(57,97);
+					genero = registro.substring(97,99);
+					idade = Double.parseDouble(registro.substring(99,102).replace(',','.'));
+					vitorias = Integer.parseInt(registro.substring(102,111));
+					empates = Integer.parseInt(registro.substring(111,120));
+					derrotas = Integer.parseInt(registro.substring(120,129));
+					moedas = Integer.parseInt(registro.substring(129,138));
+					tirosCertos = Integer.parseInt(registro.substring(138,147));
+					tirosRuins = Integer.parseInt(registro.substring(147,156));
 					
-					System.out.printf("%-5s %-8s %-50s %-40s %5.2f %6d\n", curso, ra, nomeAluno,nomeDisciplina,
-							                                               media, qtdFalta);
+					System.out.printf("%-5s %-8s %-50s %-40s %5.2f %6d\n", curso, nomeJogador, email,genero,
+							                                               idade, vitorias, empates, derrotas, moedas, tirosCertos, tirosRuins);
 					contRegistro++;
 				}
 				else {
-					System.out.println("Tipo de registro inválido");
+					System.out.println("Tipo de registro invï¿½lido");
 				}
 				
-				// lê o próximo registro
+				// lï¿½ o prï¿½ximo registro
 				registro = entrada.readLine();
 			}
 			

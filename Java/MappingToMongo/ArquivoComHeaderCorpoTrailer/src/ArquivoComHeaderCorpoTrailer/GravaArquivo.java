@@ -11,7 +11,7 @@ public class GravaArquivo {
 	public static void gravaRegistro (String nomeArq, String registro) {
 		BufferedWriter saida = null;
 		try {
-			// o argumento true é para indicar que o arquivo não será sobrescrito e sim
+			// o argumento true ï¿½ para indicar que o arquivo nï¿½o serï¿½ sobrescrito e sim
 			// gravado com append (no final do arquivo)
 			saida = new BufferedWriter(new FileWriter(nomeArq, true));
 		} catch (IOException e) {
@@ -54,29 +54,29 @@ public class GravaArquivo {
 		corpo += "02";
 		// %-5s : para strings, usamos s
 		//        alinha para a esquerda, campo de 5 caracteres, completa
-		//        espaços com brancos
+		//        espaï¿½os com brancos
 		corpo += String.format("%-5s", "ADS");
 		corpo += "01181070";
 		corpo += String.format("%-50s", "Maria Aparecida da Silva");
 		corpo += String.format("%-40s", "Banco de Dados");
-		// %05.2f : para número com casas decimais, usamos f
-		//          alinha para a direita, porque não tem o -
-		//          completa com zeros à esquerda
-		//          formata com 2 casas decimais, separado por vírgula
+		// %05.2f : para nï¿½mero com casas decimais, usamos f
+		//          alinha para a direita, porque nï¿½o tem o -
+		//          completa com zeros ï¿½ esquerda
+		//          formata com 2 casas decimais, separado por vï¿½rgula
 		corpo += String.format("%05.2f", 7.5);
-		// %03d : para número inteiro, usamos d
-		//        alinha para a direita e completa com zeros à esquerda
+		// %03d : para nï¿½mero inteiro, usamos d
+		//        alinha para a direita e completa com zeros ï¿½ esquerda
 		corpo += String.format("%03d", 10);
 		// incrementa o contador de registros de dados
 		contRegDados++;
-		// chama o método para gravar um registro
+		// chama o mï¿½todo para gravar um registro
 		gravaRegistro(nomeArq,corpo);
 		
 		// 2o registro de dados
 		corpo = "02";
 		corpo += String.format("%-5s", "BD");
 		corpo += "01181080";
-		corpo += String.format("%-50s", "José Oliveira");
+		corpo += String.format("%-50s", "Josï¿½ Oliveira");
 		corpo += String.format("%-40s", "Algoritmos");
 		corpo += String.format("%05.2f", 5.75);
 		corpo += String.format("%03d", 7);
@@ -88,7 +88,7 @@ public class GravaArquivo {
 		corpo += String.format("%-5s", "REDES");
 		corpo += "01181090";
 		corpo += String.format("%-50s", "Fulano Teixeira");
-		corpo += String.format("%-40s", "Segurança");
+		corpo += String.format("%-40s", "Seguranï¿½a");
 		corpo += String.format("%05.2f", 8.0);
 		corpo += String.format("%03d", 15);
 		contRegDados++;
