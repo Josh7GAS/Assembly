@@ -39,10 +39,10 @@ public class LeArquivo {
 				
 				if (tipoRegistro.equals("00")) {
 					System.out.println("Header");
-					System.out.println("Tipo de arquivo: " + registro.substring(2, 6));
-					int periodoLetivo= Integer.parseInt(registro.substring(6,11));
-					System.out.println("Per�odo letivo: " + periodoLetivo);
-					System.out.println("Data/hora de gera��o do arquivo: " + registro.substring(11,30));
+					System.out.println("Tipo de arquivo: " + registro.substring(2, 14));
+//					int periodoLetivo= Integer.parseInt(registro.substring(6,11));
+//					System.out.println("Per�odo letivo: " + periodoLetivo);
+					System.out.println("Data/hora de gera��o do arquivo: " + registro.substring(14,16));
 					System.out.println("Vers�o do layout: " + registro.substring(30,32));
 				}
 				else if (tipoRegistro.equals("01")) {
@@ -58,8 +58,12 @@ public class LeArquivo {
 				else if (tipoRegistro.contentEquals("02")) {
 					if (contRegistro == 0) {
 						System.out.println();
-						System.out.printf("%-5s %-50s %-40s %-2s %3s %9s %9s %9s %9s %9s %9s\n", "N° PLAYER","NOME DO JOGADOR","EMAIL","GENERO",
-								"IDADE", "VITORIAS", "EMPATES", "DERROTAS","MOEDAS", "TIROS CERTOS", "TIROS RUINS");
+						System.out.printf(
+								"%-5s %-5s %-4s %-2s %3s %9s %9s"
+								+ " %9s %9s %9s %9s\n",
+								"N° PLAYER","NOME DO JOGADOR","EMAIL","GENERO",
+								"IDADE", "VITORIAS", "EMPATES", "DERROTAS"
+								,"MOEDAS", "TIROS CERTOS", "TIROS RUINS");
 
 					}
 					
@@ -67,20 +71,20 @@ public class LeArquivo {
 					nomeJogador = registro.substring(7,57);
 					email = registro.substring(57,97);
 					genero = registro.substring(97,99);
-					idade = Double.parseDouble(registro.substring(99,102).replace(',','.'));
-					vitorias = Integer.parseInt(registro.substring(102,111));
-					empates = Integer.parseInt(registro.substring(111,120));
-					derrotas = Integer.parseInt(registro.substring(120,129));
-					moedas = Integer.parseInt(registro.substring(129,138));
-					tirosCertos = Integer.parseInt(registro.substring(138,147));
-					tirosRuins = Integer.parseInt(registro.substring(147,156));
+					idade = Integer.parseInt(registro.substring(99,102).replace(',','.'));
+					vitorias = Integer.parseInt(registro.substring(102,111).trim());
+					empates = Integer.parseInt(registro.substring(111,120).trim());
+					derrotas = Integer.parseInt(registro.substring(120,129).trim());
+					moedas = Integer.parseInt(registro.substring(129,138).trim());
+					tirosCertos = Integer.parseInt(registro.substring(138,147).trim());
+					tirosRuins = Integer.parseInt(registro.substring(147,156).trim());
 					
-					System.out.printf("%-5s %-8s %-50s %-40s %5.2f %6d\n", curso, nomeJogador, email,genero,
+					System.out.printf("%-5s %-50s %-40s %-2s %-3d %-9d %-9d %-9d %-9d %-9d %-9d %-9d\n", curso.trim(), nomeJogador.trim(), email.trim(),genero.trim(),
 							                                               idade, vitorias, empates, derrotas, moedas, tirosCertos, tirosRuins);
 					contRegistro++;
 				}
 				else {
-					System.out.println("Tipo de registro inv�lido");
+					System.out.println("Tipo de registro invalido");
 				}
 				
 				// l� o pr�ximo registro
@@ -96,7 +100,7 @@ public class LeArquivo {
 	}
 
 	public static void main(String[] args) {
-		String nomeArq = "ArquivoNotas";
+		String nomeArq = "DadosJogador";
 		leArquivo(nomeArq);
 	}
 

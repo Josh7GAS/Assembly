@@ -31,7 +31,7 @@ public class GravaArquivo {
 
 	public static void main(String[] args) {
 		
-		String nomeArq = "ArquivoNotas";
+		String nomeArq = "DadosJogador";
 		String header = "";
 		String corpo = "";
 		String trailer = "";
@@ -41,7 +41,7 @@ public class GravaArquivo {
 		Date dataDeHoje = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");  
 		
-		header += "00NOTA20192";
+		header += "00DADOSJOGADORES";
 		header += formatter.format(dataDeHoje);
 		header += "01";
 		
@@ -55,44 +55,43 @@ public class GravaArquivo {
 		// %-5s : para strings, usamos s
 		//        alinha para a esquerda, campo de 5 caracteres, completa
 		//        espa�os com brancos
-		corpo += String.format("%-5s", "ADS");
-		corpo += "01181070";
-		corpo += String.format("%-50s", "Maria Aparecida da Silva");
-		corpo += String.format("%-40s", "Banco de Dados");
+		corpo += String.format("%-5s", "1");
+		corpo += String.format("%-50s", "Joshua");
+		corpo += String.format("%-40s", "joshuaandre@gmail.com");
+		corpo += String.format("%-2s", "m");
+		corpo += String.format("%-3s", "123");
+		corpo += String.format("%-9s", "123");
+		corpo += String.format("%-9s", "123");
+		corpo += String.format("%-9s", "123");
+		corpo += String.format("%-9s", "12333");
+		corpo += String.format("%-9s", "123");
+		corpo += String.format("%-9s", "123");
 		// %05.2f : para n�mero com casas decimais, usamos f
 		//          alinha para a direita, porque n�o tem o -
 		//          completa com zeros � esquerda
 		//          formata com 2 casas decimais, separado por v�rgula
-		corpo += String.format("%05.2f", 7.5);
+//		corpo += String.format("%05.2f", 7.5);
 		// %03d : para n�mero inteiro, usamos d
 		//        alinha para a direita e completa com zeros � esquerda
-		corpo += String.format("%03d", 10);
+//		corpo += String.format("%03d", 10);
 		// incrementa o contador de registros de dados
 		contRegDados++;
 		// chama o m�todo para gravar um registro
 		gravaRegistro(nomeArq,corpo);
 		
 		// 2o registro de dados
-		corpo = "02";
-		corpo += String.format("%-5s", "BD");
-		corpo += "01181080";
-		corpo += String.format("%-50s", "Jos� Oliveira");
-		corpo += String.format("%-40s", "Algoritmos");
-		corpo += String.format("%05.2f", 5.75);
-		corpo += String.format("%03d", 7);
-		contRegDados++;
-		gravaRegistro(nomeArq,corpo);
+		
 		
 		// 3o registro de dados
-		corpo = "02";
-		corpo += String.format("%-5s", "REDES");
-		corpo += "01181090";
-		corpo += String.format("%-50s", "Fulano Teixeira");
-		corpo += String.format("%-40s", "Seguran�a");
-		corpo += String.format("%05.2f", 8.0);
-		corpo += String.format("%03d", 15);
-		contRegDados++;
-		gravaRegistro(nomeArq,corpo);
+//		corpo = "02";
+//		corpo += String.format("%-5s", "REDES");
+//		corpo += "01181090";
+//		corpo += String.format("%-50s", "Fulano Teixeira");
+//		corpo += String.format("%-40s", "Seguran�a");
+//		corpo += String.format("%05.2f", 8.0);
+//		corpo += String.format("%03d", 15);
+//		contRegDados++;
+//		gravaRegistro(nomeArq,corpo);
 
 		
 		// monta o trailer
