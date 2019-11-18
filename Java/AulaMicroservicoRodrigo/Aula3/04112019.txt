@@ -1,0 +1,25 @@
+﻿              Acesso a livros|                          | livros controller  | Livraria     |                    | LIVROS CONTROLLER | livro service |          
+ALUNO  |----------------------->-----TEMA----->-------------------->-------------->-----REST------>------------------->--------------->--------->| BD
+             |<----------------------<------------------<--------------------<--------------<----------------<-------------------<---------------<---------<|
+
+MICROSERVIÇOS NA PRÁTICA (COM GET)
+COMO UTILIZAR QUERY METHODS
+2.2.0
+br.com.bandtec
+start.spring.io
+spring web
+trocar 2.2.0 RELEASE
+para   2.1.7 RELEASE
+CTRL + SHIFT + O na classe com erro de teste
+
+Necessario
+bookstore
+	classe programa, springapplication.run
+bookstore.domain
+	classe Objeto com atributos e construtor e @JsonPropriety
+bookstore.services
+	classe serviço com métodos, lista, adiciona item na lista, @Serviço e restTemplate tbm;
+bookstore.controller
+	classe LivroController, instancia novo serviço(private Serv service), criar getmapping. Tem @RestController e @autowired para serviço.
+
+response entity contém todo conteúdo da resposta http(status code e body)
