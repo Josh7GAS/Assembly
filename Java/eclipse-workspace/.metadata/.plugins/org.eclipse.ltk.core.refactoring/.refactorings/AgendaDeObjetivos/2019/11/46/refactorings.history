@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;urlcCadastro&apos; in &apos;br.com.bandtec.AgendaDeObjetivos.service.LivrariaService.cadastrarOpiniao(...)&apos; to &apos;urlCadastro&apos;&#x0A;- Original project: &apos;AgendaDeObjetivos&apos;&#x0A;- Original element: &apos;br.com.bandtec.AgendaDeObjetivos.service.LivrariaService.cadastrarOpiniao(Opiniao).urlcCadastro&apos;&#x0A;- Renamed element: &apos;urlcCadastro&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;urlcCadastro&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;br.com.bandtec.AgendaDeObjetivos.service{LivrariaService.java[LivrariaService~cadastrarOpiniao~QOpiniao;@urlcCadastro!846!882!853!864!QString;!0!false" name="urlCadastro" references="true" stamp="1573501605389" version="1.0"/>
+</session>

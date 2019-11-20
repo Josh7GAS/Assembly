@@ -1,0 +1,41 @@
+package br.com.bandtec.bookstore.service;
+
+import br.com.bandtec.bookstore.domain.Livro;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class LivroService {
+	private List<Livro> livros;
+	private List<Opiniao> opinioes = new ArrayList<Opiniao>();
+	
+	public List<Livro> buscaPorTema(String tema){
+		List<Livro> resultados = new ArrayList<Livro>();
+		
+		for(Livro livro : todosLivros()) {
+			if(livro.comTema(tema)) {
+				resultados.add(livro);
+			}
+		}
+		
+		return resultados;
+	}
+	
+	private List<Livro> todosLivros(){
+		List<Livro> livros = new ArrayList<Livro>();
+		
+		livros.add(new Livro("50 tons de azul", "comedia"));
+		livros.add(new Livro("A morte do JS", "drama"));
+		livros.add(new Livro("Kotlin ou Java", "ti"));
+		livros.add(new Livro("JavaScript é o melhor", "ti"));
+		
+		return livros;
+	}
+	
+	public void adicionarOpiniao(Opiniao) {
+		
+	}
+}

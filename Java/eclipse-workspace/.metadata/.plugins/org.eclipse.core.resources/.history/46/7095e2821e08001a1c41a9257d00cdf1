@@ -1,0 +1,22 @@
+package com.capivaramongo.CapivaraWarsMongoAPI.controllers;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.capivarawars.CapivaraWarsMongoAPI.model.Jogador;
+
+
+
+
+
+public class CapivaraWarsMongoAPIController {
+private CapivaraWarsMongoAPIController repository;
+
+
+@RequestMapping(value = "/jogadores", method = RequestMethod.GET)
+public List<Jogador> getAll(){
+    return repository.findAll();
+}
+}

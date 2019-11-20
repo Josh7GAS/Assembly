@@ -1,0 +1,136 @@
+package br.com.capivarawarsmongo.models;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import br.com.capivarawars.database.model.AcessoriosDaCapivara;
+import br.com.capivarawars.database.model.Capivara;
+import br.com.capivarawars.database.model.Cor;
+import br.com.capivarawars.database.model.Jogador;
+
+public class Capivara {
+
+	 @Id
+	    @GeneratedValue
+	    @Column(name = "ID_CAPIVARA")
+	    private Long idCapivara;
+
+	    @Column(name = "NOME", length = VARCHAR_LENGTH_NOME)
+	    private String nome;
+
+	    @Column(name = "DATA_HORA_CRIACAO_CONTA", columnDefinition = "DATETIME")
+	    private LocalDateTime dataHoraCriacao;
+
+	    @Column(name = "BARRA_VIDA")
+	    private Integer barraVida;
+	    
+
+	    /**
+	     * RELATIONSHIPS
+	     */
+		@JsonIgnore
+	    @ManyToOne
+	    @JoinColumn(name = "ID_COR")
+	    private Cor corFK;
+		
+		@JsonIgnore
+	    @ManyToOne
+	    @JoinColumn(name = "ID_JOGADOR")
+	    private Jogador jogadorFK;
+
+		@JsonIgnore
+	    @OneToMany(mappedBy = "idAcessoriosDaCapivaraPK.capivaraFK")
+	    private List<AcessoriosDaCapivara> listaDeAcessoriosDaCapivara;
+	    //</editor-fold>
+	    //<editor-fold defaultstate="collapsed" desc="constants attributes...">
+	    public static final int VARCHAR_LENGTH_NOME = 45;
+
+	    public Long getIdCapivara() {
+	        return idCapivara;
+	    }
+
+	    public Capivara setIdCapivara(Long idCapivara) {
+	        this.idCapivara = idCapivara;
+	        return this;
+	    }
+
+	    public String getNome() {
+	        return nome;
+	    }
+
+	    public Capivara setNome(String nome) {
+	        this.nome = nome;
+	        return this;
+	    }
+
+	    public LocalDateTime getDataHoraCriacao() {
+	        return dataHoraCriacao;
+	    }
+
+	    public Capivara setDataHoraCriacao(LocalDateTime dataHoraCriacao) {
+	        if (dataHoraCriacao == null) {
+	            this.dataHoraCriacao = LocalDateTime.now();
+	        } else {
+	            this.dataHoraCriacao = dataHoraCriacao;
+	        }
+
+	        return this;
+	    }
+
+	    public Integer getBarraVida() {
+	        return barraVida;
+	    }
+
+	    public Capivara setBarraVida(Integer barraVida) {
+	        this.barraVida = barraVida;
+	        return this;
+	    }
+
+	    /**
+	     * RELATIONSHIPS
+	     */
+	    public Cor getCorFK() {
+	        return corFK;
+	    }
+
+	    public Capivara setCorFK(Cor corFK) {
+	        this.corFK = corFK;
+	        return this;
+	    }
+
+	    public Jogador getJogadorFK() {
+	        return jogadorFK;
+	    }
+
+	    public Capivara setJogadorFK(Jogador jogadorFK) {
+	        this.jogadorFK = jogadorFK;
+	        return this;
+	    }
+
+	    public List<AcessoriosDaCapivara> getListaDeAcessoriosDaCapivara() {
+	        return listaDeAcessoriosDaCapivara;
+	    }
+
+	    public Capivara setListaDeAcessoriosDaCapivara(List<AcessoriosDaCapivara> listaDeAcessoriosDaCapivara) {
+	        this.listaDeAcessoriosDaCapivara = listaDeAcessoriosDaCapivara;
+	        return this;
+	    }
+	    
+	    public boolean preencheuCamposObrigatorios() {
+	        if (dataHoraCriacao == null) {
+	            this.dataHoraCriacao = LocalDateTime.now();
+	        }
+
+	        return nome != null;
+	    }
+	
+}

@@ -1,0 +1,14 @@
+1 Fargo 7.00
+1 matix 10.00
+1 Matrix 10.00
+1;Matrix;10.00
+1;Matrix;10.00
+1;Matrix;10.00
+1;joao;12.00
+1;Gol;5.00
+2;Matrix;12.00
+1;Fargo;7.00
+1;d;1.00
+1;d;1.00
+1;d;1.00
+1;q;1.00

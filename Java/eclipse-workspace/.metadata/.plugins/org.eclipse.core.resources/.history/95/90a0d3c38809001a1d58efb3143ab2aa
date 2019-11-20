@@ -1,0 +1,5 @@
+package io.javabrains.ratingdataservice.model;
+
+public class Rating {
+
+}

@@ -1,0 +1,7 @@
+package br.com.capivarawarsmongo.security;
+
+public class Criptografia {
+
+	 public static final String STRING_CONVERSION_ERROR = "~~E4404~~";
+	
+}

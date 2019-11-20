@@ -1,0 +1,5 @@
+package com.capivaramongo.CapivaraWarsMongoAPI.controllers;
+
+public class CapivaraWarsMongoAPIController {
+
+}

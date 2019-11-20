@@ -1,0 +1,111 @@
+package br.com.capivarawarsmongo.models;
+
+//<editor-fold defaultstate="collapsed" desc="imports...">
+import java.util.List;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import org.bson.types.*;
+import org.springframework.data.annotation.*;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+//</editor-fold>
+
+//<editor-fold defaultstate="collapsed" desc="documentation...">
+/**
+ * Objective: ...
+ * 
+ * Description: ...
+ * 
+ * @version 1.0.0
+ * @author tiago, 06/11/2019, 19:31:20
+ * Last update: -
+ *///</editor-fold>
+@Document(collection = "Jogadores")
+public class Jogadores {
+    
+    //<editor-fold defaultstate="collapsed" desc="attributes...">
+    
+    //<editor-fold defaultstate="collapsed" desc="main attributes...">
+    @Id
+    private Long _id;
+    
+//    @Indexed(name = "nick")
+    private String nick;
+    
+//    @Indexed(name = "senha", lenght = VARCHAR_LENGTH_NICK, unique = true, nullable=false)
+    private String senha;
+    
+  // @Indexed(name = "DATAHORA_CRIACAO_CONTA", columnDefinition = "DATETIME")
+    private LocalDateTime dataHoraCriacaoConta;
+    
+    //@Indexed(name = "URL_FOTO", length = VARCHAR_LENGTH_URL_FOTO)
+    private String urlFoto;
+    
+  //  @Indexed(name = "NOME_COMPLETO", length = VARCHAR_LENGTH_NOME_COMPLETO)
+    private String nomeCompleto;
+    
+    //@Indexed(name = "EMAIL", length = VARCHAR_LENGTH_EMAIL, unique = true)
+    private String
+    
+    public Jogadores() {}
+    
+    public Jogadores(Long _id, String nick, LocalDateTime dataDateTime, String raca) {
+        this._id = _id;
+        this.nick = nick;
+        this.senha = senha;
+        this.dataHoraCriacaoConta = raca;
+    }
+
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="methods...">
+    //<editor-fold defaultstate="collapsed" desc="getter and setter methos...">
+    public String get_id() {
+        return _id.toHexString();
+    }
+
+    public Jogadores set_id(ObjectId _id) {
+        this._id = _id;
+        return this;
+    }
+
+    public String getNome() {
+        return nick;
+    }
+
+    public Jogadores setNome(String nome) {
+        this.nick = nome;
+        return this;
+    }
+
+    public String getEspecie() {
+        return senha;
+    }
+
+    public Jogadores setEspecie(String especie) {
+        this.senha = especie;
+        return this;
+    }
+
+    public String getRaca() {
+        return dataHoraCriacaoConta;
+    }
+
+    public Jogadores setRaca(String raca) {
+        this.dataHoraCriacaoConta = raca;
+        return this;
+    }    
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="override methods...">
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="auxiliary methods...">
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="static methods...">
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="main methods...">
+    //</editor-fold>
+    //</editor-fold>
+
+    
+        
+}//class

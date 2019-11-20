@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="Indexed"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="Column"/>
+			<item value="join"/>
+			<item value="List"/>
+			<item value="ManyToOne"/>
+			<item value="listaDeJogadoresParticipantes"/>
+			<item value="@DBref"/>
+			<item value="@OneToMany"/>
+			<item value="Index"/>
+			<item value="mongo"/>
+			<item value="CURSO"/>
+			<item value="curso"/>
+			<item value="lista vazia"/>
+			<item value="nota"/>
+			<item value="Jogador ganhadores;"/>
+			<item value=""/>
+		</list>
+		<list key="replacehistory">
+			<item value="Indexed"/>
+			<item value="java.util.List"/>
+			<item value="DBRef"/>
+			<item value="@DBRef"/>
+			<item value="@DBref"/>
+			<item value="Index"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="944"/>
+		<item key="DIALOG_Y_ORIGIN" value="193"/>
+		<item key="DIALOG_WIDTH" value="341"/>
+		<item key="DIALOG_HEIGHT" value="441"/>
+		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|10.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="447"/>
+		<item key="DIALOG_Y_ORIGIN" value="221"/>
+	</section>
+</section>

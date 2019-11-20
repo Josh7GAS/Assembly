@@ -1,0 +1,56 @@
+package br.com.capivarawarsmongo.controllers;
+
+import java.util.List;
+import java.util.ArrayList;
+import javax.validation.Valid;
+import org.bson.types.ObjectId;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.web.bind.annotation.*;
+//</editor-fold>
+
+import br.com.capivarawarsmongo.models.Jogador;
+import br.com.capivarawarsmongo.repositories.CapivaraWarsMongoRepository;
+
+@RestController
+@RequestMapping("/api")
+public class CapivaraWarsMongoController {
+    
+
+    @Autowired
+    private CapivaraWarsMongoRepository repository;
+
+    @RequestMapping(value = "/jogadorMongo", method = RequestMethod.GET)
+    public List<Jogador> getAll(){
+        return repository.findAll();
+    }
+    
+    @RequestMapping(value = "/animais/{id}", method = RequestMethod.GET)
+    public Jogador getById(@PathVariable("id") ObjectId _id){
+        return repository.findBy_id(_id);
+    }
+    
+    @RequestMapping(value = "/animais/{id}", method = RequestMethod.PUT)
+    public void modifyAnimalById(@PathVariable("id") ObjectId _id, @Valid @RequestBody Jogador animalDeEstimacao){
+        animalDeEstimacao.setIdJogador(IdJogador);
+        repository.save(animalDeEstimacao);
+    }
+    
+    @RequestMapping(value = "/animais", method = RequestMethod.POST)
+    public Jogador createAnimal(@Valid @RequestBody Jogador animalDeEstimacao){
+//        animalDeEstimacao.set_id(ObjectId.get()); //O Mongo cria automaticamente
+        repository.save(animalDeEstimacao);
+        return animalDeEstimacao;
+    }
+    
+    @RequestMapping(value = "/animais/{id}", method = RequestMethod.DELETE)
+    public Jogador deleteById(@PathVariable("id") ObjectId _id){
+        Jogador jogador = repository.findBy_id(_id);
+        repository.deleteById(_id);
+        return jogador;
+    }
+    
+    //</editor-fold>
+    
+    //</editor-fold>
+        
+}//class

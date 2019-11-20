@@ -1,0 +1,14 @@
+package com.capivaramongo.CapivaraWarsMongoAPI;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CapivaraWarsMongoApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CapivaraWarsMongoApiApplication.class, args);
+	       System.out.println("\n\n API Rest com MongoDB funcionando!!! :)\n\n");
+	}
+
+}

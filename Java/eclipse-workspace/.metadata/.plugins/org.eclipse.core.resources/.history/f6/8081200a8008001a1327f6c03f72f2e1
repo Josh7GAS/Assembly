@@ -1,0 +1,10 @@
+package br.com.capivarawarsmongo.models;
+
+import java.time.LocalDateTime;
+
+public class Partida {
+	private Long idPartida;
+	 private LocalDateTime dataHoraInicio;
+	 private LocalDateTime dataHoraFim;
+	 private Boolean empatou;
+}

@@ -1,0 +1,61 @@
+package br.com.capivarawarsmongo.controllers;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.bson.types.ObjectId;
+import org.springframework.beans.factory.annotation.Autowired;
+//</editor-fold>
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.capivarawarsmongo.models.Jogador;
+import br.com.capivarawarsmongo.repositories.CapivaraWarsMongoRepository;
+
+@RestController
+@RequestMapping("/api")
+public class CapivaraWarsMongoController {
+    
+
+    @Autowired
+    private CapivaraWarsMongoRepository repository;
+
+    @RequestMapping(value = "/jogadorMongo", method = RequestMethod.GET)
+    public List<Jogador> getAll(){
+        return repository.findAll();
+    }
+    
+    @RequestMapping(value = "/jogadorMongo/{id}", method = RequestMethod.GET)
+    public Jogador getById(@PathVariable("id") ObjectId idJogador){
+        return repository.findBy_id(idJogador);
+    }
+    
+    @RequestMapping(value = "/animais/{id}", method = RequestMethod.PUT)
+    public void modifyAnimalById(@PathVariable("id") ObjectId _id, @Valid @RequestBody Jogador animalDeEstimacao){
+        Jogador.setIdJogador(idJogador);
+        repository.save(Jogador);
+    }
+    
+    @RequestMapping(value = "/animais", method = RequestMethod.POST)
+    public Jogador createAnimal(@Valid @RequestBody Jogador animalDeEstimacao){
+//        animalDeEstimacao.set_id(ObjectId.get()); //O Mongo cria automaticamente
+        repository.save(animalDeEstimacao);
+        return animalDeEstimacao;
+    }
+    
+    @RequestMapping(value = "/animais/{id}", method = RequestMethod.DELETE)
+    public Jogador deleteById(@PathVariable("id") ObjectId _id){
+        Jogador jogador = repository.findBy_id(_id);
+        repository.deleteById(_id);
+        return jogador;
+    }
+    
+    //</editor-fold>
+    
+    //</editor-fold>
+        
+}//class

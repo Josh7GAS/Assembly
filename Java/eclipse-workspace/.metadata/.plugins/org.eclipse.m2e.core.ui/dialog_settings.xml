@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/home/joshua/Oficina/Java/bookstoreJava"/>
+			<item value="/home/joshua/Oficina/Java/AgendaDeObjetivos"/>
+			<item value="/home/joshua/AulaMicroservicoRodrigo/movie-info-service"/>
+			<item value="/home/joshua/AulaMicroservicoRodrigo/bookstore"/>
+			<item value="/home/joshua/AulaMicroservicoRodrigo/agendadeobjetivos"/>
+			<item value="/home/joshua/AulaMicroservicoRodrigo/rating-data-service"/>
+			<item value="/home/joshua/AulaMicroservicoRodrigo/movie-catalog-service"/>
+			<item value="/home/joshua/newmongoPet"/>
+			<item value="/home/joshua/CapivaraWars/Java/Backend/SpringBoot/CapivaraWarsDatabaseAPI"/>
+			<item value="/home/joshua/mongoPetStore"/>
+			<item value="/home/joshua/CapivaraWars/Java/Backend/SpringBoot/CapivaraWarsMongoAPI"/>
+			<item value="/home/joshua/CapivaraWars/Java/Backend/SpringBoot"/>
+			<item value="/home/joshua/Oficina/Java/MappingToMongo/ArquivoComHeaderCorpoTrailer"/>
+			<item value="/home/joshua/bookstoreJava"/>
+			<item value="/home/joshua/Desktop/bookstore"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/home/joshua/CapivaraWars/Java/Backend/SpringBoot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

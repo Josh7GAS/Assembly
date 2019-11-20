@@ -1,0 +1,7 @@
+package com.capivaramongo.CapivaraWarsMongoAPI.controllers;
+
+import com.capivaramongoCapivarawarsMongoAPI.repositories.CapivaraWarsMongoAPIRepository;
+
+public class CapivaraWarsMongoAPIController {
+private CapivaraWarsMongoAPIRepository repository;
+}
