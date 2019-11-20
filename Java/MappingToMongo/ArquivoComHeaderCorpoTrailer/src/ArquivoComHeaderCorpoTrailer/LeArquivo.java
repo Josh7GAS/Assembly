@@ -28,13 +28,13 @@ public class LeArquivo {
 			System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
 		}
 		
-		// L� os registros do arquivo
+		// Lê os registros do arquivo
 		try {
-			// L� um registro
+			// Lê um registro
 			registro = entrada.readLine();
 			
 			while (registro != null) {
-				// Obt�m o tipo do registro
+				// Obtem o tipo do registro
 				tipoRegistro = registro.substring(0, 2);
 				
 				if (tipoRegistro.equals("00")) {
