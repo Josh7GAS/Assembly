@@ -1,3 +1,5 @@
+package baralhoCarta;
+
 
 public class Pilha {
 	private int topo;
@@ -11,12 +13,27 @@ public class Pilha {
 
 	private boolean isEmpty() {
 		return(topo == -1);
-	
+		//		boolean estaVazio = false;
+		//		for (int cadaIndex : pilha) {
+		//			if (topo == -1) {
+		//				return estaVazio = true;
+		//			}else {
+		//				return estaVazio;
+		//			}
+		//		}
+		//		return estaVazio;
 	}
 
 	private boolean isFull() {
 		return (topo == pilha.length-1 );
-
+		//		boolean estaCheio = false;
+		//		for (int cadaIndex : pilha) {
+		//			if (topo == tamanho-1) {
+		//				return estaCheio = true;
+		//			}else {
+		//				return estaCheio;
+		//			}
+		//		}return estaCheio;
 	}
 
 	void push(int info) {

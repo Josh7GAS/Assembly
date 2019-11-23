@@ -45,21 +45,6 @@ public class Fila {
 			System.out.println("Fila esta vazia");
 		}return pollInQueu;
 	}
-	//		String tmpVar = null;
-	//		int first=0;
-	//		int last=-1;
-	//		if (!isEmpty()) {
-	//			tmpVar = fila[first];
-	//			first++;
-	//			if (first>last) {
-	//				first=0;
-	//				last=-1;
-	//			}
-	// 
-	//		}else {
-	//			System.out.println("Fila esta vazia");
-	//		}return tmpVar;
-	//	}
 
 	void show() {
 		if (!isEmpty()) {
