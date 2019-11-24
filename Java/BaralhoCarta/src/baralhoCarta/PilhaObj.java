@@ -1,17 +1,5 @@
 package baralhoCarta;
 
-
-// <editor-fold defaultstate="collapsed" desc="imports...">
-
-// <editor-fold defaultstate="collapsed" desc="documentation...">
-/**
- * Objective: ...
- *
- * Description: ...
- *
- * @version 1.0.0
- * @author WINDOWS 8.1 JOSHUA, 20/11/2019, 22:43:33 Last update: -
- */// </editor-fold>
 public class PilhaObj<T> {
 
 	private int topo;
@@ -28,13 +16,12 @@ public class PilhaObj<T> {
 	}
 
 	public boolean isFull() {
-		return (topo == pilha.length - 1);
+		return (topo == pilha.length-1);
 
 	}
 
 	void push(T info) {
 		if (!isFull()) {
-
 			pilha[++topo] = info;
 		} else {
 			System.out.println("Pilha esta cheia");
@@ -69,4 +56,17 @@ public class PilhaObj<T> {
 			}
 		}
 	}
+
+	@Override
+	public String toString() {
+		for (int count = 0; count < pilha.length; count++) {
+			T mostraPilha = pilha[count];
+			System.out.println(mostraPilha);
+		};
+		return "PilhaObj{" + "topo=" + topo + ", pilha=" + pilha + '}';
+	}
+
+	
+	
+	
 }

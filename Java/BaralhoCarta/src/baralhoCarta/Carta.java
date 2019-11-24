@@ -1,18 +1,5 @@
 package baralhoCarta;
 
-
-// <editor-fold defaultstate="collapsed" desc="imports...">
-
-// <editor-fold defaultstate="collapsed" desc="documentation...">
-/**
- * Objective: ...
- * 
- * Description: ...
- * 
- * @version 1.0.0
- * @author WINDOWS 8.1 JOSHUA, 20/11/2019, 23:14:44
- * Last update: -
- */// </editor-fold>
 public class Carta {
 	
 	private int valor;
@@ -51,10 +38,9 @@ public class Carta {
 	}
 
 	
-	
 	@Override
 	public String toString() {
-		return getFace()+"de"+getNaipe()+"/n";
+		return getFace()+" de "+getNaipe();
 	}
 
 }//class

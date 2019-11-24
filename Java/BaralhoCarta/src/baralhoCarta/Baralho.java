@@ -1,41 +1,28 @@
 package baralhoCarta;
 
-
-// <editor-fold defaultstate="collapsed" desc="imports...">
 import java.util.Random;
-// </editor-fold>
 
-// <editor-fold defaultstate="collapsed" desc="documentation...">
-/**
- * Objective: ...
- *
- * Description: ...
- *
- * @version 1.0.0
- * @author WINDOWS 8.1 JOSHUA, 20/11/2019, 23:19:38 Last update: -
- */// </editor-fold>
 public class Baralho {
 
+	private int tamanho = 52;
 	private PilhaObj<Carta> baralho;
 
 	public Baralho() {
-		this.baralho = new PilhaObj<Carta>(52);
+		this.baralho = new PilhaObj<>(tamanho);
 		String[] faces = new String[]{"Ás", "1", "2", "3", "4", "5", "6", "7",
 			"8", "9", "10", "Valete", "Dama", "Rei"};
 		String[] naipes = new String[]{"Copas", "Paus", "Ouros", "Espadas"};
 
-		while (baralho.isFull()) {
-			for (int countFaces = 0; countFaces < faces.length; countFaces++) {
-				for (int countNaipe = 0; countNaipe < naipes.length; countNaipe++) {
-					Carta carta = new Carta(faces[countFaces], naipes[countNaipe]);
+		while (!baralho.isFull()) {
+			for (String face : faces) {
+				for (String naipe : naipes) {
+					Carta carta = new Carta(face, naipe);
 					baralho.push(carta);
-
 				}
-
 			}
-		}
 
-		System.out.println(baralho);
+		}
+		this.baralho = baralho;
 
 	}
 
@@ -48,12 +35,12 @@ public class Baralho {
 	}
 
 	public Carta removeCarta(int id) {
-		PilhaObj<Carta> aux = new PilhaObj<Carta>(52);
+		PilhaObj<Carta> aux = new PilhaObj<Carta>(tamanho);
 		for (int count = 0; count < id; count++) {
 			aux.push(baralho.pop());
 		}
 		Carta alvo = baralho.pop();
-		while (aux.isFull()) {
+		while (!aux.isFull()) {
 			baralho.push(aux.pop());
 		}
 		return alvo;
@@ -61,14 +48,13 @@ public class Baralho {
 
 	public void embaralharar() {
 
-		for (int count = 0; count < 52; count++) {
+		for (int count = 0; count < tamanho; count++) {
 
 			Random aleatorio = new Random();
-			int indice = aleatorio.nextInt(52);
+			int indice = aleatorio.nextInt(tamanho);
 
 			if (indice != 0) {
-				Carta carta = removeCarta(indice);
-				baralho.push(carta);
+				baralho.push(removeCarta(indice));
 
 			}
 
@@ -82,9 +68,5 @@ public class Baralho {
 		return baralho.peek();
 	}
 
-	@Override
-	public String toString() {
-		return getClass().getSimpleName()+"[ + name]
-	}
 
 }//class
