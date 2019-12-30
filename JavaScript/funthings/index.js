@@ -5,7 +5,7 @@ const bencode = require('bencode');
 
 const dgram = require('dgram');
 const Buffer = require('buffer').Buffer;
-const urlParse = require('url').parse;
+const urlParse = require('url').parse;]
 
 const socket = dgram.createSocket("udp4");
 
