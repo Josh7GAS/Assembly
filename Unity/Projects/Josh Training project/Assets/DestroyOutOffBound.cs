@@ -17,6 +17,7 @@ public class DestroyOutOffBound : MonoBehaviour
     {
         if (transform.position.z > topBound)
         {
+            //The "gameObjects" variable receive the passive object in the game
             Destroy(gameObject);
         }else if (transform.position.z < lowerBound)
         {
