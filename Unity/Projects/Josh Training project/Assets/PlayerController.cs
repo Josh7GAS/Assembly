@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Lauch a projectile => GameObject to use as projectile we called here as "projectileProfab" from the player
+            
             Instantiate(projectileProfab, transform.position, projectileProfab.transform.rotation);
         }
     }
