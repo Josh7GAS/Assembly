@@ -20,11 +20,12 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.S)) {
 
-            //Move the animals from S keyin a Randomn positioon
-            SpawnRandomAnimal();
-        }
+
+        //Move the animals from S keyin a Randomn positioon
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        SpawnRandomAnimal();
+        
     }
 
     void SpawnRandomAnimal()
