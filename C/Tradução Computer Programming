@@ -1,0 +1,19 @@
+Network Programing 
+I've stopped in the 29 page.
+
+so lets translate the first paragrafer 
+
+
+
+O que é um Socket ?
+Você já escutou sobre "socket" o tempo todo, e talvez você se questione o que eles são exatamente. Bem eles são isso: um modo de programas se comunicarem usando os descritadores padrões do Unix.
+
+Que?
+
+Ok você deve ter ouvido algum usuário de Unix falar "Jesus, tudo no Unix é arquivo!!" o Que esta pessoa esta tentando pessoa de fato esta tentando dizer que todo tipo de I/O (Input/Output) eles fazem atraves de leitura e escrita a um descritador de arquivos. Um descriptador de arquivos é uma integer simples acociada com com um arquivo aberto. Mas ("E aquem vem a pegadinha"), esse arquivo pode ser uma conexão a internet, um FIFO, um pipe (|), um terminal, um arquivo em disco, ou qualquer outra coisa. Tudo em Unix é um arquivo! Então toda vez que você quiser se comunicar com outro programa pela Internet você fara por um descriptador de arquivos, pode acreditar.
+
+"Onde pego esse descriptador de arquivos para comunicação de redes, Sr Espertinho?" É provalvelmente a ultima pergunta em sua mente mas eu irei respondela mesmo assim: Você faz uma chamada para um sistema de socket() de rotina. Que retorna o descriptador de socket, e você se comunica atraves dele usando os métodos send() e recv() (man send(), man recv())chamadas the socket.
+
+"Mas Perae!" você pode estar questionando agora. "Se ele é um descriptador de arquivos, porque no nome de Netuno eu não posso utilizar as os metodos read() e write() normais para se comunicar atraves do socket?" A resposta rápida é: sim, você pode!" A rsposta longa é "Você pode, mas s métodos send() e recv() oferecem maior controle sobre sua transmição de dados."
+
+O que mais Agora? e sobre isso: A todo tipo de sockets. A o endereço de internet DARPA (Internert Sockets), caminhos em um Node local(Unix Sockets), endereço CCIT X25 (X.25 Sockets que você pode seguramente ignorar), e provalvelmente muitos outros dependendo da versão de Unix que você roda. Este documento foca apenas no primeiro: Internet Sockets.
