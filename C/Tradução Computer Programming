@@ -17,3 +17,69 @@ Ok você deve ter ouvido algum usuário de Unix falar "Jesus, tudo no Unix é ar
 "Mas Perae!" você pode estar questionando agora. "Se ele é um descriptador de arquivos, porque no nome de Netuno eu não posso utilizar as os metodos read() e write() normais para se comunicar atraves do socket?" A resposta rápida é: sim, você pode!" A rsposta longa é "Você pode, mas s métodos send() e recv() oferecem maior controle sobre sua transmição de dados."
 
 O que mais Agora? e sobre isso: A todo tipo de sockets. A o endereço de internet DARPA (Internert Sockets), caminhos em um Node local(Unix Sockets), endereço CCIT X25 (X.25 Sockets que você pode seguramente ignorar), e provalvelmente muitos outros dependendo da versão de Unix que você roda. Este documento foca apenas no primeiro: Internet Sockets.
+
+
+
+Dois Tipos de Sockets de Internet
+O que é isso aqui? Tem dois tipos de sockets de internet?. Sim. Na verdade, não. Eu menti. Tem mais, porem eu não queria te assustar. Eu só irei falar sobre dois tipos aqui. Menos nesse parte pois gostaria de dizer que "Raw sockets" são bem poderosos em você deveria dar uma checada.
+
+Tudo certo, pronto. O que são dois tipos? Um deles é "Stream Sockets"; o outro é "Datagram Sockets", cada um deles será referenciado aqui como "SOCK_STREAM" e "SOCK_DGRAM", respectivamente. Datagram sockets é chamado algumas vezes de "sockets sem conexões". (Eles podem ser conectados pelo metodo connect() se você realmente desejar. Veja na guia connect(), abaixo.)
+
+Stream sockets é uma conexão bidimensional confiável. Se você enviar dois itens em uma ordem, ex: "1, 2", eles chegaram na ordem "1, 2" no ponto final. Eles támbem serão livre de erros, tanto que eu irei colocar meus dedos em meus ouvidos e cantarolar "la la la la" Se qualquer um tentar me convencer do contrário.
+
+Para que são usados stream sockets? Bem, você deve ter ouvido falar de aplicações telnet, certo? Ela usa stream sockets. Todos os caracteres que você digitou precisão chegar na ordem em que eles foram enviados, certo? Tambem, browsers web usam o protocolo HTTP que utiliza stream sockets para acessar as páginas. De fato se você der Telnet a um website na porta 80, e digitar "GET / HTTP/1.0" e apertar RETURN duas vezes, ele vai retornar o HTML de volta para você!
+
+Como stream sockets atigem esse alto nível de de qualidade de transmissão de dados? Eles usam um protocolo chamado "Transmission Control Protocol", támbem conhecido como "TCP", "TCP" se certifica de que seus dados seram enviados em sequência e sem erros. Você Deve ter ouvido falar do TCP como a parte boa do "TCP/IP" onde o "IP" significa "Internet Protocol", o IP generencia o rotiamento da internet e não é geralmente associado responsávle pela integridade de dados.
+
+Legal. E sobre sockets Datagram? por que eles são chamados de "sem conexão"? O que rola aqui, de qualquer forma? Por que ele é não confiável? Bem, aqui estão alguns fatos: se você envia um datagram, ele pode chegar. Ele pode chegar fora de ordem. E se chegar os dados seram livre de erros.
+
+Sockets Datagram támbem usam IP para rotiamento, mas eles não usam TCP; eles usam "User Datagram Protocol", ou "UDP"(Veja RFC 768.)
+
+Por que eles são sem conexão? Bem, básicamente, é porque você não necessita manter uma conexão aberta como é feito com Stream Sockets. Você constroi um pacote, adiciona um endereço IP com a informação do destino, e envia. Sem conexão necessária. Eles são muito utilizados quando o TCP stack não está disponível ou quando a perca de alguns acotes aque e ali não significa o fim do Universo. Exemplo de aplicações: tftp (trivil file trasnfer protocol, o irmão mais novo do FTP), dhcpcd (a DHCP client), jogos multiplayers, streaming de audio e conferencia de video, etc.
+
+"Espere um minuto" ftp e dhcp são utiizados para a transferência de aplicações binárias de um host para outro! Dados não podem ser perdidos se você espera a aplicação funcionar quando o dados chegarem! Que tipo de Mágia negra é essa?"
+
+Bem, meu amigo humano, ftp e programas similares tem o próprio prtocolo de UDP no topo. Por exemplo, o protocolo ftp diz que para cada pacote enviado, o receptor tem que enviar um pacote que diz, "Eu pegeui" (um pacote ACK.) Se o host que enviou os pacotes não receber a mensagem, em, digamos, 5 segundos, ele retransmitira o pacote até receber um ACK. Este conhecimento é muito importante quando é implementado uma aplicação SOCK_DGRAM de conexão confiável.
+
+Para aplicações não estáveis como jogos, audio ou vídeo, você apenas ignora os pacotes perdidos, ou talvez tentaria compensar essas perdas. (Jogadores aciduos saberam a mnifestação desse efeito pelo termo: lag almadiçuado, nesse caso a palavra amaldiçuado representada um profanação extrema.)
+
+Por que você utilizaria uma conexão instável? Duas razões: velocidade e velocidade. É bem mais rápido mandar e esquecer do que mandar e rastrear se o pacote foi entregue de forma completa e em ordem. Se troca mensagens em um chat, TCP é excelente; Se você está enviado 40 dados de updates por segundo sobre a posição de um jogador em um mundo, talvez não importe se um pacote ou outro se perca, então é UDP é uma boa escolha.
+
+
+
+Baixo Nível Sem sentido e Téoria de Redes
+Desde que mencionei as camadas de protocolo, é hora de falar como as redes realmente funcionam, e de mostrar alguns exemplos de como os pacotes de SOCK_DGRAM são construidos. Praticamente, você pode pular essa parte, porem é uma boa base para o que iremos discutir.
+
+Ei crianças é hora de aprender sobre encapsulamento de dados! Isso é muito muito importante. É tão importante que você so irá aprender isso aqui em uma univversidade ;-). Basicamente, é isso: um pacote nasce, o pacote é encapsulado em um "header" (raramente em um footer)pelo primeiro protocolo(Digamos TFTP Protocol), então a coisa toda(TFTP junto do cabeçalho) é incapsulado novamente pelo proximo protocolo,(Ex:UDP), e então para o proximo (IP), então de novo pelo último protocolo no hardware(Físico)parte da interner da camada.
+
+Quando outro computador recebe o pacote, o harware pega a parte do protocolo do cabeçalho de internet o kernel pega a parte do IP e a parte do cabeçalho de do IP e do UDP, o programa TFTP pega a parte do cabeçalho do FTP, e então obtem os dados.
+
+Agora eu posso falar da infame camada OSI. Esse modelo de redes descreve o sistema de funcionalidades de redes que tem vantagens sobre outros modelos. Por hora você pode escrever sockets que são exatamente os mesmos sem se importar em como os dados estão sendo transmitidos. (em um computador level ou em uma internet robusta) porque programas em níveis mais baixos cuidam disso para você. O hardware de redes e sua topologia é tranparente ao programador de socket.
+
+Sem mais delongas, Eu irei apresentar as camadas do modelo completo. Lembre-se disso para as provas das aulas de redes: *Aplicação *Apresentação *Seção *Transporte *Redes *Link de dados *Físico.
+
+A camada física é o hardware (serial, Ethernet, etc.). A camada de aplicação é longe da camada fisica o quanto você consegue imaginar, é nele que é feita a navegação. 
+
+Agora, esse modelo é tão genérico que você pode utilizalo com guia de consert para automoveis se você quiser. um modelo de camada mais consistente com o unix será: *Camada de Aplicação (telnet, ftp, etc.) *Host-to-Host camada de transporte (TCP, UDP) *Camada de Internet(IP e de rotiamento) *Acesso a internet (Ethernet, wi-fi, ou qualquer coisa)
+
+Nessa altura você já pode enchergar como esesas camadas correspondem desde a origem do encapsulamento desses dados.
+
+Viu quanto trabalho para encapsular um simples pacote, Jesus! E você precisa setar nos pacote usando "cat"! Brincadeirinha. Tudo o que você precisa fazer para rodar um socket é enviar() os dados. Tudo o que você precisa fazer para um realizar um datagram socket é encapsular o pacote no método da sua escolha e envialo. O kernel constroi a camada de transporte e a camada de internet para você e o hardware faz a camada de acesso da rede. Ahh tecnologia moderna.
+
+Então termina nosssa breve jornada em téoria de redes. A sim, eu esqueci de te dizer tudo o que queria dizer sobre rotiamento: nada! É isso ae, eu não irei falar sobre nada disso. O roteador despe o pacote para o cabeçalho do IP, consulta a tabela de rotiamento, blah, blah, blah, blah. Cheque o IP RFC se você nunca houviu falar disso, bem, você viverá.
+
+
+
+
+ENDEREÇO DE IP, STRUCTS, E INTERMEDIANDO DADOS.
+
+
+Aqui é a Parte do Jogo que falamos um pouco de codigo.
+
+Mas primeiro, vamos discutir um pouco de de téoria! Eba! primeiro eu queira falar sobre endereçamento de IP e portas só um pouco so para termos isso já resolvido. Então falaremos como as API´s de sockets manipulam endereços de IP e outros dados.
+
+
+
+Endereçamento de IP, versõe 4 e 6.
+
+Nós bom e velhos tempos quano Ben Kenobi ainda era chamado de Obi Wan Kenobi, tinha um otimo sistema de rotamento de internet chamado O protocolo de Internet versão 4, támbem chamado IPv4
