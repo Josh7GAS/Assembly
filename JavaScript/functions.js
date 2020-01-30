@@ -14,3 +14,5 @@ function square(number) {
 console.log(square(2));
 
 greet('John', 'Wick');
+
+console.log(('b' + 'a' + + 'a' + 'a').toLowerCase());
