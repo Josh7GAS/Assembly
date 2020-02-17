@@ -1,7 +1,7 @@
 
 #PAsta e caminho da planilha
-$caminhoArquivo = "D:\Users\re91852z\Desktop\ip_adress_test.xlsx"
-$nomeAba = "Planilha1"
+$caminhoArquivo= "D:\Users\re91852z\Documents\Tozzini\All_Equipment-20200211-113215.xlsx"
+$nomeAba = "All_Equipment-20200211-113215"
 
 #craindo um objeto usando Com interface
 $objExcel = New-Object -ComObject Excel.Application
@@ -16,29 +16,29 @@ $WorkBook = $objExcel.Workbooks.Open($caminhoArquivo)
 $WorkSheet = $WorkBook.sheets.item($nomeAba)
 
 #$numLines = $WorkSheet.usedrange
-$numLines = 1240
+$numLines = 176
+
+$rowsIp = New-Object System.Collections.ArrayList
+
+ $newIpList = New-Object System.Collections.ArrayList
 
 for ($count = 1; $count -le $numLines; $count++) {
+
+    $rowsIp += $WorkSheet.Range("B" + $count).Value()
     
-    [pscustomobject]@{
+}$objExcel.quit()
 
-        IpAdresses = $WorkSheet.Range("A" + $count).Text
-        
-    }
 
-    $ip += Select-Object IpAdresses
-    
-}
-
-Write-Host $ip
-
-foreach ($ips in $ip) {
+foreach ($ips in $rowsIp) {
 
     $ip1, $ip2, $ip3, $ip4 = $ips.Split(".")
 
     $ip_list = $ip1, ".", $ip2, ".", $ip3, ".x"
 
-    $newIpList = -join $ip_list
+    $newIpList = -join $ip_list 
 
-    Write-host $newIpList `n
+    Write-Host $newIpList 
+
+    #Write-Host $newIpList | Sort-Object | Get-Unique
 }
+
