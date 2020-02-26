@@ -82,4 +82,57 @@ Mas primeiro, vamos discutir um pouco de de téoria! Eba! primeiro eu queira fal
 
 Endereçamento de IP, versõe 4 e 6.
 
-Nós bom e velhos tempos quano Ben Kenobi ainda era chamado de Obi Wan Kenobi, tinha um otimo sistema de rotamento de internet chamado O protocolo de Internet versão 4, támbem chamado IPv4
+Nós bom e velhos tempos quano Ben Kenobi ainda era chamado de Obi Wan Kenobi, tinha um otimo sistema de rotamento de internet chamado O protocolo de Internet versão 4, támbem chamado IPv4 Tem endereços feitos de quatro bytes(apelidado de "octetos"), e é comumente escrito em "pontos e números" formando assim: 192.0.2.111.
+
+Você provavelmente já viu por ae.
+
+De fato, no tempo que isso foi escrito, virtualmente todo site na internet usa IPv4.
+
+Todo mundo incluindo Obi-Wan, estava feliz. Tudo estava ótimo até que um pessimista chamado Vint Cerf alertou a todo munde que os endereços IPv4 estavam acabando!
+
+(Alem de avisar a todos do Apocalipse de desgraça e meláncolia, VintCerf tambem conhecido como pai da internet. Então não tenho poder de julgar as decisões dele.)
+
+Acabar os endereçamentos: como isso pode acontecer? Quero dizer, tem tipo bilhões de endereços IP em 32-bit IPv4. Realmente temos bilhões de computadores por ae?
+
+Sim.
+
+Alias no começo, quando avia apenas alguns computadores e todos pensavão que bilhão era um número inalcansavel, algumas grandes organizações alocaram bilhões de endereços para dominio próprio. (Como: Xerox, MIT, Ford, HP, IBM, GE, AT&T, e uma pequena empresa chamado Apple, para dizer algumas.)
+
+De fato, se não fossem por algumas medidas já era para ter se esgotado a muito tempo atrás.
+
+Mas agora nós estamos vivendo uma era onde cada ser humano tem um endereço IP, cada computador, cada calculadora, cada telefone, cada metro quadrado e (poque não) cada filhotinho de cachorro, tambem.
+
+E então, IPv6 nasceu. Desde Vint Cerf é provavelmente imortal (mesmo que sua forma física passe, ele provaelmente está existindo em algum tipo de hiper-inteligencia programa ELIZA nas profundidades da internet2), niguem quer ouvir ele dizer denovo "Eu Disse" Se não tivermos endereços suficientes na proxima versão de Protocolos de Internet(IP).
+
+O que isso de sugere?
+
+Que nós precisamos de mais endereços. De que não só precisamos do dobro, não um bilhão de vezes, não mil trilhões de vezez, mas 79 MILHÕS BILHÕES TRILHÕES de vezes o quanto possível de endereços! Isso mostrara para eles!
+
+Você estava dizendo, "Beej, isso é verddade? Eu tenho cada razão para desailitar números grandes." Bem, a differença entre 32 bits e 128 bits pode não soar muito; são apenas 96 bits, certo? mas lembrando, nós estamos falando de podere aqui: 32 bits repesenta 4 bilhões de números (2³²), enquanto 128 bits representão 340 números trilhões trilhões(de verdade, 2¹²8). Isso é um milhão de internet IPv4 para cada estrela no nosso Universo.
+
+Esqueça esse padrão de pontos e números, agora nós temos uma representação em hexadecimal, com cada dois-bytes separados por dois pontos (":"), assim:
+
+	2001:0db8:c9d2:aee5:73e3:934a:a5ae:9551
+
+Isso não é tudo! Muitas vezes você terá IP´s com um monte de zeros nele, e você pode comprimir entre dois pontos. E você pode deixar zeros a equerda para cada par de byte. Por instância, cada um desses pares de endereços é equivalente:
+
+	2001:0db8:c9d2:0012:0000:0000:0000:0051
+	2001:db8:c9d2:12::51
+
+	2001:0db8:ab00:0000:0000:0000:0000:0000
+	2001:db8:ab00::
+
+	0000:0000:0000:0000:0000:0000:0000:0001
+	::1
+
+O endereço ::1 é o loopback. Isso significa:"Essa é a maquina que estou rodando". Em Ipv4, o endereço de loopback é 127.0.0.1.
+
+Finalmente, a um modo compativel IPv4 para IPv6 que você pode ter cruzado. Se você quiser, por exemplo, para representar o endereço IPv4 192.0.2.33 como um endereço IPv6, você precisar usar a seguinte notação: "::ffff:192.0.2.33".
+
+Nós estamos falando seriamente divertido.
+
+De fato, é tão seriamente divertido, que os criadores do IPv6 teve o cavalherismo já loparam trilhões e trilhões de endereços para uso próprio, mas nos temos tantos, francamente, quem está contando? Tem tanto deixado para cada homem, mulher criança, cachorrinho, e metro quadrado em cada planeta na galaxia. E acredite-me, cada planeta na galaxia tem um parquimetro. Você sabe que é verdade.
+
+Subnets
+
+parei na pagina 10 "Subnets"
