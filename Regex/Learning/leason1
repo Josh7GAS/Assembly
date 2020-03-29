@@ -1,0 +1,10 @@
+Pattern Beginning
+
+you can match petterns useing "[]" to apply the search; Ex: [a-z] on abcdefghijklmnopqrswxyz it will match starting in 'a to z'
+to negate the values you search, like search only for some values you should use '^' as a negative expression simmiliar are '!=' in the programing languages, ;Ex:[^a-z] in a range like abcdefghijklmnopqrswxyzABCDEFGHIJKLMNOPQRSTUVWYXZ it will exclude the lowercases latters.
+
+With '-' you can navigate in to a range of values using like "[-]"; Ex: on a range 'abcdefghijklmnopqrswxyzABCDEFGHIJKLMNOPQRSTUVWYXZ1234567890' i use [a-z]
+
+With [\ -~] i can mach on the all the values i wanna it.
+
+with "|" you can akternate a search like a cat dog fish, you can do "cat|dog|fish"
