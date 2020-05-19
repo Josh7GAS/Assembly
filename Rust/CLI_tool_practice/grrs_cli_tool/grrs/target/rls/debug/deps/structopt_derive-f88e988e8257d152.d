@@ -1,0 +1,10 @@
+/home/josh7gas/Oficina/Rust/CLI_tool_practice/grrs_cli_tool/grrs/target/rls/debug/deps/libstructopt_derive-f88e988e8257d152.so: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/attrs.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/doc_comments.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/parse.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/spanned.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/ty.rs
+
+/home/josh7gas/Oficina/Rust/CLI_tool_practice/grrs_cli_tool/grrs/target/rls/debug/deps/structopt_derive-f88e988e8257d152.d: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/attrs.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/doc_comments.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/parse.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/spanned.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/ty.rs
+
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/lib.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/attrs.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/doc_comments.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/parse.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/spanned.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/ty.rs:

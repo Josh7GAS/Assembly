@@ -5,7 +5,7 @@ fn main() {
 fn fibonacci(){
     let mut actual: isize = 0;
     let mut before: isize = 1;
-    let mut after: isize = 0;
+    let mut after: isize;
 
     for fib_numb in 0..15 {
         //0         0         1

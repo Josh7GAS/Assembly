@@ -1,0 +1,1 @@
+/home/josh7gas/Oficina/Rust/CLI_tool_practice/grrs_cli_tool/preety_output-error/target/debug/preety_output-error: /home/josh7gas/Oficina/Rust/CLI_tool_practice/grrs_cli_tool/preety_output-error/src/main.rs
