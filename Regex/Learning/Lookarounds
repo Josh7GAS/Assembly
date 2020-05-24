@@ -1,0 +1,22 @@
+Lookarounds
+
+Thre is lookahead and lookbehind    
+
+Lookaraouns turns to be the searching of metacharacters to find something behind or after a word.
+like this 
+
+silly cat
+happy cat
+cool cat
+cool dog
+cool bird
+cool fish
+fun cat
+
+lookahead
+Command -> (?<=cool\ )cat - With this I´m maching the words that have cool before cat in the text above.
+Coomand -> (?<!cool\ )cat - With this I´m matching the words that dosen´t have cool before cat in the sequence.
+
+lookbehind
+Commands -> cool(?=\ cat) - Looking for the cat after the cool word
+Commands -> cool(?!\ cat) - Looking for the word diferent than cat after cool

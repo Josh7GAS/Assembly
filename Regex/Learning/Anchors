@@ -1,0 +1,2 @@
+Anchors match the start and the end of a string
+like "^\w+" for the begining of the string and "\w+.$"

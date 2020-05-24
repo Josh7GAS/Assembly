@@ -1,0 +1,9 @@
+to restric the search to a exact match
+
+Exemple 
+woo
+woohooo
+eodfjosofa
+
+Command -> woo\b
+only the word "woo" will be matched

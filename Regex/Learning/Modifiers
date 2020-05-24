@@ -1,0 +1,20 @@
+Modifiers change the behaviour of a regex wpattern and are the inline method and the end of the pattern method.
+
+the modifiers are 
+
+Commands -> "(?misx)"
+
+"m" is for it´s related with the anchors, to catch the beging from every line of the string, works with "^" and with "$" 
+
+"i" is for the case incesitive pattern 
+
+"s" will match every string on the file 
+
+"x" is for a mor readable regex you can add comments on the regex
+
+to cancel the modifiers you have to use "-" as this: (?i)^[a-z]+\ (?-i)[A-Z]+ on the text: 
+
+MATCH ME
+and match me.
+
+it will match only the MATCH

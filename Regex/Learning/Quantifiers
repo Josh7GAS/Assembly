@@ -1,0 +1,9 @@
+Matching multiple things in one 
+* = 0 or more times
++ = 1 or more times 
+
+Greedy Match
+Exemple ->
+<p>Paragraph 1</p><p>Paragraph 2</p><p>Paragraph 3</p>
+Command -> <p>.*</p>
+Not Greedy <p>.*?</p>

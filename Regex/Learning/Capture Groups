@@ -1,0 +1,9 @@
+Capture Groups are string groups that are made with the words.
+
+That is we have like a 9 group word and we can use them, a Capture group will be like this:
+(dog)
+to not cpature the group you need to do like this (?:Hello)
+
+In sumary Capture groups create make the wrds variables and save to memory
+
+To make a non capture group start the expression with "?:"

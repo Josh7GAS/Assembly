@@ -1,0 +1,45 @@
+Metacharacters
+
+1) "." will match every thing expet by new lines 
+
+with you wanna match the dot sing you use "\."
+
+2) "\w" is for matcing alphanumeric values, so the negation of this meta is begining with "^"; Ex: ^\w but there is a metacharacter for "\w" as well, it is \W (Capital W)
+
+3) "\d" to get the digits. The Negation ^\d, or \D
+
+4) "\t" to matching tabs
+
+5) "\n" to matching new lines. 
+
+6) "\s" to matching the space. The Negation ^\s or \S
+
+7) "^" match the begining of the line, not like if the word is at the begining but mathing a pattern like "cat"
+
+
+Tip:
+To search for "[]" you can use \[\]
+
+Reminder=== I´ve stopped in quantifiers leason nº10
+
+Keep in mind that
+
+Metacharacter  Name                         Matches
+    .           dot                          any one charcater
+    [...]       charcater class              any charcater listed
+    [^...]      Negative character class     any charcater not listed
+    ^           caret                        the position at the start of the line
+    $           dollar                       the position at the end of the line
+    \<          backslash less-than          the position at the start of a word, just with egrep, and not version support this
+    \>          backslash greater-than       the position at the end of word just with egrep, and not version support this
+    |           or, bar                      matches either expressions it separates
+    (...)       parantheses                  used to limit the scope od "|" plus additional uses yet to be discussed 
+
+
+    Repetition Metacharacters
+
+    Minimum     Maximum     
+    Required     to Try     Meaning
+?   none          1         One allowed; none required("one optinal")
+*   none        no limit    unlimited allowed; none required ("any amount OK")
++    1          no limit    unlimited allowed; one required ("at least one")

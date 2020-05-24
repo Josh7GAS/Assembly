@@ -1,0 +1,5 @@
+Iteration uses the curly brace 4 {4} to match a pattern and how he repeats
+
+Exemple:
+4444
+Command -> 4{2,4}? not greedy search

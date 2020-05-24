@@ -11,15 +11,17 @@ struct Cli {
     #[structopt(parse(from_os_str))]
     path: std::path::PathBuf,
 }
-fn main() {
+fn main() -> std::io::Result<()>{
     let args = Cli::from_args();
     //reading the string on the file
     let file_to_read = File::open(&args.path)?;
     let reader = BufReader::new(file_to_read);
+
+    Ok(())
     // for line in reader.lines(){
     //     if line.contains(&args.pattern){
     //         println!("{}", line?);
     //     }
     // }
-    Ok(())
+    
 }
