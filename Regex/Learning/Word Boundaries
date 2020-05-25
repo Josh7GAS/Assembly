@@ -7,3 +7,7 @@ eodfjosofa
 
 Command -> woo\b
 only the word "woo" will be matched
+
+also "<\" and "\>" are word boundaries
+
+\< \>

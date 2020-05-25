@@ -7,3 +7,9 @@ Exemple ->
 <p>Paragraph 1</p><p>Paragraph 2</p><p>Paragraph 3</p>
 Command -> <p>.*</p>
 Not Greedy <p>.*?</p>
+
+    Minimum     Maximum     
+    Required     to Try     Meaning
+?   none          1         One allowed; none required("one optinal")
+*   none        no limit    unlimited allowed; none required ("any amount OK")
++    1          no limit    unlimited allowed; one required ("at least one")
