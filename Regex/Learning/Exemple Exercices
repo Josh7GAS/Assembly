@@ -1,0 +1,81 @@
+1)
+This follow exemple is a telephone list
+123-456-5555
+(123) 222-1234
+123 555 5555
+123 .777 .7979
++91 (123) 455-6000
+
+
+The command ->
+(?mx)
+^(?:\+\d{1,2}\ )?
+\(?\d{3}\)?
+[\ \.-]
+\d{3}
+[\ \.-]
+\d{4}
+
+2)
+CSV information, grab just the data
+4/5/2015 13:34, Apples, 73
+4/5/2015 3:41, Cherries, 85
+4/6/2015 12:46, Pears, 14
+4/8/2015 8:59, Oranges, 52
+4/10/2015 2:07, Apples, 152
+4/10/2015 18:10, Bananas, 23
+4/10/2015 2:40, Strawberries, 98
+
+Command -> [^,\n]+
+//I´m eliminating what is "," and what is new line
+
+3)
+Selecting the first and the last column
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr 22 01:50 .
+drwxr-xr-x 1 josh7gas josh7gas 512 May 18 20:46 ..
+drwxrwxrwx 1 josh7gas josh7gas 512 May 24 22:52 .git
+-rw-rw-rw- 1 josh7gas josh7gas 218 Apr  2 23:49 .gitignore
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 .vscode
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Assembly
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 C
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Groovy
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Java
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 JavaScript
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 PowerShell
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr 22 19:14 Python
+-rw-rw-rw- 1 josh7gas josh7gas  63 Apr  2 23:49 README.md
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Regex
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Ruby
+drwxrwxrwx 1 josh7gas josh7gas 512 May 17 15:26 Rust
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Shell
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 Unity
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 aprendendo-react
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 exercicio-de-livro
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 openstack
+drwxrwxrwx 1 josh7gas josh7gas 512 Apr  2 23:49 teste
+
+Command -> ^\S+|\S+$
+
+4)
+Getting the something one This
+<table style="width:100%">
+<tr>
+	<th>Firstname</th>
+	<th>Lastname</th>
+	<th>Age</th>
+</tr>
+<tr>
+	<td>Jill</td>
+	<td>Smith</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>Eve</td>
+	<td>Jackson</td>
+	<td>94</td>
+</tr>
+</table>
+
+Command -> (?x)
+           (?<=<td>)
+           [^<>]+

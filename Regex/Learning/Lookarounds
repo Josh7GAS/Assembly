@@ -13,10 +13,10 @@ cool bird
 cool fish
 fun cat
 
-lookahead
+lookbehind
 Command -> (?<=cool\ )cat - With this I´m maching the words that have cool before cat in the text above.
 Coomand -> (?<!cool\ )cat - With this I´m matching the words that dosen´t have cool before cat in the sequence.
 
-lookbehind
+lookahead
 Commands -> cool(?=\ cat) - Looking for the cat after the cool word
 Commands -> cool(?!\ cat) - Looking for the word diferent than cat after cool
