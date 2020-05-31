@@ -13,7 +13,6 @@ STORING_OUTPUT() {
 #This WHILE loop is for walk trough the array MATCHVALUES compare with the ""comm="nom-http"" string,
 # and if the value match store the matched value and the previous one in a new array;
 STORING_MATCHED() {
-
     VALUE=0
     VAR=0
     COMM='comm="nom-http"'
