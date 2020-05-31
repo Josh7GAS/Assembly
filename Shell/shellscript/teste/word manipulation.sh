@@ -1,49 +1,41 @@
 #/bin/bash
-COUNT=0;
-VALUE=0;
-VAR=0;
-COMM='comm="nom-http"';
-for AUX in ` grep -P -o '(?x)((?<=\Kauid=)|(?<=\Kcomm="nom))[\S]+' audit.log.1` 
-do
-   MATCHVALUES[$COUNT]=$AUX; 
-   #do manipulations here
-    COUNT=$(($COUNT+1));
-   
-done
-#echo "Value of third element in my array : ${MATCHVALUES[@]} ";
- MATCHVALUES_LENGTH=${#MATCHVALUES[@]};
 
-# for LOOKINSIDE in "${MATCHVALUES[@]}"; 
-# do
-#     if [ $LOOKINSIDE == $COMM ];
-#         then 
-#             #NEW_OUTPUT[$COUNT_2]=$LOOKINSIDE[$COUNT_2-1];
-            
-#             NEW_OUTPUT[$COUNT_2]=$LOOKINSIDE[$COUNT_2];
-#             echo ${NEW_OUTPUT[$COUNT_2]}
-            
-#         fi
-#         COUNT_2=$(($COUNT_2+1));
-# done
+#this function is used to store the regex output in a array, called "MATCHVALUES[$COUNT]=$AUX";
+STORING_OUTPUT() {
+    COUNT=0
 
-# echo "Value of third element in my array : ${NEW_OUTPUT[$COUNT_2]} ";
-# echo "NEW_OUTPUT_LENGTH = ${#NEW_OUTPUT[@]}";
+    for AUX in $(grep -P -o '(?x)((?<=\Kauid=)|(?<=\Kcomm="nom))[\S]+' audit.log.1); do
+        MATCHVALUES[$COUNT]=$AUX
+        COUNT=$(($COUNT + 1))
 
-while [ $VALUE -lt $MATCHVALUES_LENGTH ]; do
-    if [ ${MATCHVALUES[VALUE]} == $COMM ]; then       
-         NEW_OUTPUT[$VAR]+=${MATCHVALUES[$VALUE-1]};
-         VAR=$(($VAR+1));
-         NEW_OUTPUT[$VAR]+=${MATCHVALUES[$VALUE]};
-         VAR=$(($VAR+1));
-         fi
-         VALUE=$(($VALUE+1));
-done
-echo 'count'$COUNT;
-echo 'matchvlues' $MATCHVALUES_LENGTH;
-echo 'value' $VALUE;
-echo "NEW_OUTPUT_LENGTH = ${#NEW_OUTPUT[@]}"; 
-echo ${NEW_OUTPUT[@]};
+    done
+}
+#This WHILE loop is for walk trough the array MATCHVALUES compare with the ""comm="nom-http"" string,
+# and if the value match store the matched value and the previous one in a new array;
+STORING_MATCHED() {
+
+    VALUE=0
+    VAR=0
+    COMM='comm="nom-http"'
+
+    while [ $VALUE -lt ${#MATCHVALUES[@]} ]; do
+        if [ ${MATCHVALUES[VALUE]} == $COMM ]; then
+            NEW_OUTPUT[$VAR]+=${MATCHVALUES[$VALUE - 1]}
+            VAR=$(($VAR + 1))
+            NEW_OUTPUT[$VAR]+=${MATCHVALUES[$VALUE]}
+            VAR=$(($VAR + 1))
+        fi
+        VALUE=$(($VALUE + 1))
+    done
+    #Here it´s output the desired manipuled log;
+    echo ${NEW_OUTPUT[@]}
+}
+
+STORING_OUTPUT
+STORING_MATCHED
+
+#here it can be outputed line by line;
 # for show in ${NEW_OUTPUT[@]};
 # do
 #     echo $show
-#     done
+# done
