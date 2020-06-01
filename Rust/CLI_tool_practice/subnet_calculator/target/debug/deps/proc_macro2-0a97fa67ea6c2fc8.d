@@ -1,0 +1,11 @@
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/debug/deps/proc_macro2-0a97fa67ea6c2fc8.rmeta: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/parse.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/detection.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/fallback.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/wrapper.rs
+
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/debug/deps/libproc_macro2-0a97fa67ea6c2fc8.rlib: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/parse.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/detection.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/fallback.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/wrapper.rs
+
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/debug/deps/proc_macro2-0a97fa67ea6c2fc8.d: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/parse.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/detection.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/fallback.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/wrapper.rs
+
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/lib.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/parse.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/detection.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/fallback.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.17/src/wrapper.rs:

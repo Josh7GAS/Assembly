@@ -1,0 +1,11 @@
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/debug/deps/proc_macro_error-bd0fbe0a6d435117.rmeta: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/dummy.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/diagnostic.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/macros.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/imp/fallback.rs
+
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/debug/deps/libproc_macro_error-bd0fbe0a6d435117.rlib: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/dummy.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/diagnostic.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/macros.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/imp/fallback.rs
+
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/debug/deps/proc_macro_error-bd0fbe0a6d435117.d: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/dummy.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/diagnostic.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/macros.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/imp/fallback.rs
+
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/lib.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/dummy.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/diagnostic.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/macros.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.2/src/imp/fallback.rs:

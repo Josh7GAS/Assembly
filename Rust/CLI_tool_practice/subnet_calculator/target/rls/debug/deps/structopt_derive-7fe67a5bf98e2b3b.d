@@ -1,0 +1,10 @@
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/rls/debug/deps/libstructopt_derive-7fe67a5bf98e2b3b.so: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/attrs.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/doc_comments.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/parse.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/spanned.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/ty.rs
+
+/home/joshua/Oficina/Rust/CLI_tool_practice/subnet_calculator/target/rls/debug/deps/structopt_derive-7fe67a5bf98e2b3b.d: /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/lib.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/attrs.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/doc_comments.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/parse.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/spanned.rs /home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/ty.rs
+
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/lib.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/attrs.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/doc_comments.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/parse.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/spanned.rs:
+/home/joshua/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.7/src/ty.rs:
