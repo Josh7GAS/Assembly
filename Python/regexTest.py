@@ -1,19 +1,27 @@
-import re
-pattern = re.compile("(?x)((?<=\Kauid=)|(?<=\Kcomm=\"nom))[\S]+")
+import regex
+pattern = regex.compile('(?x)((?<=\Kauid=)|(?<=\Kcomm="nom))[\S]+')
 matchvalues = []
 new_output = []
-i=1
+comm = 'comm="nom-http"'
+i = 1
 
-for i,line in enumerate(open('audit.log.1')):
-    for match in re.finditer(pattern, line):
-        matchvalues.append(match)
-        
+with open('/home/joshua/Script/audit.log.1', 'r') as file:
+    for line in file:
+        for word in line.split():
+            matchvalues.append(word)
 
+            
+matchvalues_size = len(matchvalues)
 
-while i <= len(matchvalues):
-    if matchvalues[i] == 'comm="nom-http"':
-        new_output.append(matchvalues[i-1], matchvalues[i])
+while i < matchvalues_size:
+    if matchvalues[i] == comm:
+        new_output.append(matchvalues[i-1])
         i+=1
-    for aux in new_output:
-        print(aux)
+        new_output.append(matchvalues[i])
+        i+=1
+    else:
+        i+=1
+        continue
 
+print(matchvalues_size)
+print(i)
