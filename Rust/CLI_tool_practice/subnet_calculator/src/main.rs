@@ -25,26 +25,33 @@ fn main() {
             Err(_) => continue,
         };
 
-        let ip_last_octet: u32 = match split_input_to_get_ip[split_input_to_get_ip.len() - 1]
+        let ip_last_octet: usize = match split_input_to_get_ip[split_input_to_get_ip.len() - 1]
             .trim()
             .parse()
         {
             Ok(num2) => num2,
             Err(_) => continue,
         };
-        getting_last_octet_binary(ip_last_octet);
-        getting_mask_octet(mask);
+        let binary_last_octet_from_ip = getting_last_octet_binary(ip_last_octet);
+        let binary_last_octet_from_mask = getting_mask_octet(mask);
+
+        getting_network_address_and_broadcast_address(
+            binary_last_octet_from_ip,
+            binary_last_octet_from_mask,
+            split_input_to_get_ip,
+        );
+
         break;
     }
 }
 
-fn getting_last_octet_binary(ip_last_octet: u32) {
+fn getting_last_octet_binary(ip_last_octet: usize) -> Vec<usize> {
     let arr = vec![128, 64, 32, 16, 8, 4, 2, 1];
     let mut aux = 0;
     let binary_ip = 8;
     let mut count = 0;
     let mut binary_on_ip = vec![0; binary_ip];
-    println!("We want to find = {}", ip_last_octet);
+    // println!("We want to find = {}", ip_last_octet);
 
     for walk in arr {
         aux += walk;
@@ -63,10 +70,15 @@ fn getting_last_octet_binary(ip_last_octet: u32) {
             continue;
         }
     }
-    println!("getting last octet binary from the IP Address {:?}", binary_on_ip);
+    // println!(
+    //     "getting last octet binary from the IP Address {:?}",
+    //     binary_on_ip
+    // );
+
+    return binary_on_ip;
 }
 
-fn getting_mask_octet(mask: usize) {
+fn getting_mask_octet(mask: usize) -> Vec<usize> {
     let mut num = 0;
     let byte = 8;
     let mut first_bit_from_the_last_octet = 24;
@@ -90,11 +102,58 @@ fn getting_mask_octet(mask: usize) {
     for count in 0..7 {
         last_octet[count] = octet[first_bit_from_the_last_octet];
         first_bit_from_the_last_octet += 1;
-
     }
 
-    println!("the mask is: {}", mask);
-    println!("{:?}mask binary form\n", octet);
+    // println!("the mask is: {}", mask);
+    // println!("{:?}mask binary form\n", octet);
 
-    println!("{:?}last octet binary from the mask\n", last_octet);
+    // println!("{:?}last octet binary from the mask\n", last_octet);
+
+    return last_octet;
+}
+
+fn getting_network_address_and_broadcast_address(
+    binary_last_octet_from_ip: Vec<usize>,
+    binary_last_octet_from_mask: Vec<usize>,
+    split_input_to_get_ip: Vec<&str>,
+) {
+    let octets = 4;
+    let mut network_address = vec![0; octets];
+    let mut broasdcast_address = vec![0; octets];
+    let mut first_host_address = vec![0; octets];
+    let mut last_host_address = vec![0; octets];
+    let mut network_octet = 0;
+    let broadcast_octet;
+    let first_host_octet;
+    let last_host_octet;
+    let bits = vec![128, 64, 32, 16, 8, 4, 2, 1];
+
+    for count in 0..7 {
+        if binary_last_octet_from_ip[count] != 0 && binary_last_octet_from_mask[count] != 0 {
+            network_octet += bits[count];
+        }
+    }
+
+    broadcast_octet = network_octet + 31;
+    first_host_octet = network_octet + 1;
+    last_host_octet = broadcast_octet - 1;
+
+    for count in 0..split_input_to_get_ip.len() {
+        network_address[count] = split_input_to_get_ip[count].parse().unwrap();
+        broasdcast_address[count] = split_input_to_get_ip[count].parse().unwrap();
+        first_host_address[count] = split_input_to_get_ip[count].parse().unwrap();
+        last_host_address[count] = split_input_to_get_ip[count].parse().unwrap();
+    }
+
+    network_address[octets - 1] = network_octet;
+    first_host_address[octets - 1] = first_host_octet;
+    last_host_address[octets - 1] = last_host_octet;
+    broasdcast_address[octets - 1] = broadcast_octet;
+
+    println!(
+        "\n Network Address {:?}\n First Host Address{:?}\n Last Host Address{:?}\n Broadcast Address{:?}",
+        network_address, first_host_address, last_host_address, broasdcast_address
+    );
+
+    //criar o arquivo xml e seguindo os padroes do arquivo do Douglas
 }
