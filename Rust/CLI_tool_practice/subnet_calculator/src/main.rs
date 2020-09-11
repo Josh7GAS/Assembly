@@ -1,9 +1,10 @@
+extern crate xml;
+
+use std::fs::File;
 use std::io;
-//use structopt::StructOpt;
-// #[derive(StructOpt)]
-// struct Cli{
-//     ip_adress:String,
-// }
+use std::io::{self, Write};
+
+use xml::writer::{EmitterConfig, EventWriter, Result, XmlEvent};
 
 fn main() {
     loop {
@@ -17,8 +18,6 @@ fn main() {
 
         let split_input_to_get_mask: Vec<&str> = net_mask_input.split("/").collect();
         let split_input_to_get_ip: Vec<&str> = split_input_to_get_mask[0].split(".").collect();
-
-        //let mask = split_input_to_get_mask[0].parse::<usize>().unwrap();
 
         let mask: usize = match split_input_to_get_mask[1].trim().parse() {
             Ok(num) => num,
@@ -51,7 +50,6 @@ fn getting_last_octet_binary(ip_last_octet: usize) -> Vec<usize> {
     let binary_ip = 8;
     let mut count = 0;
     let mut binary_on_ip = vec![0; binary_ip];
-    // println!("We want to find = {}", ip_last_octet);
 
     for walk in arr {
         aux += walk;
@@ -70,10 +68,6 @@ fn getting_last_octet_binary(ip_last_octet: usize) -> Vec<usize> {
             continue;
         }
     }
-    // println!(
-    //     "getting last octet binary from the IP Address {:?}",
-    //     binary_on_ip
-    // );
 
     return binary_on_ip;
 }
@@ -103,11 +97,6 @@ fn getting_mask_octet(mask: usize) -> Vec<usize> {
         last_octet[count] = octet[first_bit_from_the_last_octet];
         first_bit_from_the_last_octet += 1;
     }
-
-    // println!("the mask is: {}", mask);
-    // println!("{:?}mask binary form\n", octet);
-
-    // println!("{:?}last octet binary from the mask\n", last_octet);
 
     return last_octet;
 }
@@ -155,5 +144,45 @@ fn getting_network_address_and_broadcast_address(
         network_address, first_host_address, last_host_address, broasdcast_address
     );
 
-    //criar o arquivo xml e seguindo os padroes do arquivo do Douglas
+ 
+}
+   //criar o arquivo xml e seguindo os padroes do arquivo do Douglas, segue modelo abaixo
+
+// <DiscoveryJob identifier="DISCOVERY_JOB"><Description></Description><Schedule runnow="true"></Schedule>
+// <DiscoveryOptionsList><DiscoveryOptions><MgmtProtocolList><MgmtProtocol>snmpv2c</MgmtProtocol>
+// </MgmtProtocolList><useNmap>false</useNmap><doNotManageDevices>false
+// </doNotManageDevices><useLoopBackIp>false</useLoopBackIp><Timeout>10
+// </Timeout><IPRangeList><IPRange><Start>142.40.77.0</Start><End>142.40.77.255</End></IPRange>
+// <IPRange><Start>142.40.78.0</Start><End>142.40.79.255</End></IPRange><IPRange><Start>142.40.80.0</Start>
+// <End>142.40.80.255</End></IPRange><IPRange><Start>142.40.182.0</Start><End>142.40.183.255</End>
+// </IPRange><IPRange><Start>142.40.184.0</Start><End>142.40.185.255</End></IPRange>
+// <IPRange><Start>142.40.184.0</Start><End>142.40.187.255</End></IPRange></IPRangeList></DiscoveryOptions>
+// </DiscoveryOptionsList></DiscoveryJob>
+fn handle_event<W: Write>(w: &mut EventWriter<W>, line: String) -> Result<()> {
+    let line = line.trim();
+    let event: XmlEvent = if line.starts_with("+") && line.len() > 1 {
+        XmlEvent::start_element(&line[1..]).into()
+    } else if line.starts_with("-") {
+        XmlEvent::end_element().into()
+    } else {
+        XmlEvent::characters(&line).into()
+    };
+    w.write(event);
+}
+
+fn create_file(){
+    let mut file = File::create("output.xml").unwrap();
+
+    let mut input = io::stdin();
+    let mut output = io::stdout();
+    let mut writer = EmitterConfig::new().perform_indent(true).create_writer(&mut file);
+    loop{
+        print!("> "); output.flush().unwrap();
+        let mut line = String::new();
+        match input.read_line(&mut line){
+            Ok(_) => {}
+            Err(e)=> panic!("Write error: {}", e)
+        },
+        Err(e) => panic("Input error: {}", e)
+    }
 }
