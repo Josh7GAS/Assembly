@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 structopt = "0.3.13"
-xml-rs= "0.8"
+xmlwriter = "0.1.0"

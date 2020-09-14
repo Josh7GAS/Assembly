@@ -1,45 +1,56 @@
-extern crate xml;
-
-use std::fs::File;
 use std::io;
-use std::io::{self, Write};
-
-use xml::writer::{EmitterConfig, EventWriter, Result, XmlEvent};
+use xmlwriter::*;
 
 fn main() {
     loop {
-        println!("Give me an Ip and Mask.");
-
-        let mut net_mask_input = String::new();
+        println!("How many Ip's with mask you will insert?");
+        let mut input_number = String::new();
 
         io::stdin()
-            .read_line(&mut net_mask_input)
-            .expect("Failed to read Line");
+            .read_line(&mut input_number)
+            .expect("Failed to read number");
 
-        let split_input_to_get_mask: Vec<&str> = net_mask_input.split("/").collect();
-        let split_input_to_get_ip: Vec<&str> = split_input_to_get_mask[0].split(".").collect();
+        let mut number_input: usize = input_number.trim().parse().unwrap();
 
-        let mask: usize = match split_input_to_get_mask[1].trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
+        while number_input > 0 {
+            loop {
+                println!("Give me an Ip and Mask.");
 
-        let ip_last_octet: usize = match split_input_to_get_ip[split_input_to_get_ip.len() - 1]
-            .trim()
-            .parse()
-        {
-            Ok(num2) => num2,
-            Err(_) => continue,
-        };
-        let binary_last_octet_from_ip = getting_last_octet_binary(ip_last_octet);
-        let binary_last_octet_from_mask = getting_mask_octet(mask);
+                let mut net_mask_input = String::new();
 
-        getting_network_address_and_broadcast_address(
-            binary_last_octet_from_ip,
-            binary_last_octet_from_mask,
-            split_input_to_get_ip,
-        );
+                io::stdin()
+                    .read_line(&mut net_mask_input)
+                    .expect("Failed to read Line");
 
+                let split_input_to_get_mask: Vec<&str> = net_mask_input.split("/").collect();
+                let split_input_to_get_ip: Vec<&str> =
+                    split_input_to_get_mask[0].split(".").collect();
+
+                let mask: usize = match split_input_to_get_mask[1].trim().parse() {
+                    Ok(num) => num,
+                    Err(_) => continue,
+                };
+
+                let ip_last_octet: usize = match split_input_to_get_ip
+                    [split_input_to_get_ip.len() - 1]
+                    .trim()
+                    .parse()
+                {
+                    Ok(num2) => num2,
+                    Err(_) => continue,
+                };
+                let binary_last_octet_from_ip = getting_last_octet_binary(ip_last_octet);
+                let binary_last_octet_from_mask = getting_mask_octet(mask);
+
+                getting_network_address_and_broadcast_address(
+                    binary_last_octet_from_ip,
+                    binary_last_octet_from_mask,
+                    split_input_to_get_ip,
+                );
+                number_input -= 1;
+                break;
+            }
+        }
         break;
     }
 }
@@ -140,13 +151,11 @@ fn getting_network_address_and_broadcast_address(
     broasdcast_address[octets - 1] = broadcast_octet;
 
     println!(
-        "\n Network Address {:?}\n First Host Address{:?}\n Last Host Address{:?}\n Broadcast Address{:?}",
+        "\n Network Address {:?}\n First Host Address{:?}\n Last Host Address{:?}\n Broadcast Address{:?}\n",
         network_address, first_host_address, last_host_address, broasdcast_address
     );
-
- 
 }
-   //criar o arquivo xml e seguindo os padroes do arquivo do Douglas, segue modelo abaixo
+//criar o arquivo xml e seguindo os padroes do arquivo do Douglas, segue modelo abaixo
 
 // <DiscoveryJob identifier="DISCOVERY_JOB"><Description></Description><Schedule runnow="true"></Schedule>
 // <DiscoveryOptionsList><DiscoveryOptions><MgmtProtocolList><MgmtProtocol>snmpv2c</MgmtProtocol>
@@ -158,31 +167,30 @@ fn getting_network_address_and_broadcast_address(
 // </IPRange><IPRange><Start>142.40.184.0</Start><End>142.40.185.255</End></IPRange>
 // <IPRange><Start>142.40.184.0</Start><End>142.40.187.255</End></IPRange></IPRangeList></DiscoveryOptions>
 // </DiscoveryOptionsList></DiscoveryJob>
-fn handle_event<W: Write>(w: &mut EventWriter<W>, line: String) -> Result<()> {
-    let line = line.trim();
-    let event: XmlEvent = if line.starts_with("+") && line.len() > 1 {
-        XmlEvent::start_element(&line[1..]).into()
-    } else if line.starts_with("-") {
-        XmlEvent::end_element().into()
-    } else {
-        XmlEvent::characters(&line).into()
-    };
-    w.write(event);
-}
+// fn handle_event<W: Write>(w: &mut EventWriter<W>, line: String) -> Result<()> {
+//     let line = line.trim();
+//     let event: XmlEvent = if line.starts_with("+") && line.len() > 1 {
+//         XmlEvent::start_element(&line[1..]).into()
+//     } else if line.starts_with("-") {
+//         XmlEvent::end_element().into()
+//     } else {
+//         XmlEvent::characters(&line).into()
+//     };
+//     w.write(event);
+// }
 
-fn create_file(){
-    let mut file = File::create("output.xml").unwrap();
+// fn create_file(){
+//     let mut file = File::create("output.xml").unwrap();
 
-    let mut input = io::stdin();
-    let mut output = io::stdout();
-    let mut writer = EmitterConfig::new().perform_indent(true).create_writer(&mut file);
-    loop{
-        print!("> "); output.flush().unwrap();
-        let mut line = String::new();
-        match input.read_line(&mut line){
-            Ok(_) => {}
-            Err(e)=> panic!("Write error: {}", e)
-        },
-        Err(e) => panic("Input error: {}", e)
-    }
-}
+//     let mut input = io::stdin();
+//     let mut output = io::stdout();
+//     let mut writer = EmitterConfig::new().perform_indent(true).create_writer(&mut file);
+//     loop{
+//         print!("> "); output.flush().unwrap();
+//         let mut line = String::new();
+//         match input.read_line(&mut line){
+//             Ok(_) => {}
+//             Err(e)=> panic!("Write error: {}", e)
+//         },
+//         Err(e) => panic("Input error: {}", e)
+//     }
