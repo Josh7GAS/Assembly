@@ -157,40 +157,42 @@ fn getting_network_address_and_broadcast_address(
 }
 //criar o arquivo xml e seguindo os padroes do arquivo do Douglas, segue modelo abaixo
 
-// <DiscoveryJob identifier="DISCOVERY_JOB"><Description></Description><Schedule runnow="true"></Schedule>
-// <DiscoveryOptionsList><DiscoveryOptions><MgmtProtocolList><MgmtProtocol>snmpv2c</MgmtProtocol>
-// </MgmtProtocolList><useNmap>false</useNmap><doNotManageDevices>false
-// </doNotManageDevices><useLoopBackIp>false</useLoopBackIp><Timeout>10
-// </Timeout><IPRangeList><IPRange><Start>142.40.77.0</Start><End>142.40.77.255</End></IPRange>
-// <IPRange><Start>142.40.78.0</Start><End>142.40.79.255</End></IPRange><IPRange><Start>142.40.80.0</Start>
-// <End>142.40.80.255</End></IPRange><IPRange><Start>142.40.182.0</Start><End>142.40.183.255</End>
-// </IPRange><IPRange><Start>142.40.184.0</Start><End>142.40.185.255</End></IPRange>
-// <IPRange><Start>142.40.184.0</Start><End>142.40.187.255</End></IPRange></IPRangeList></DiscoveryOptions>
-// </DiscoveryOptionsList></DiscoveryJob>
-// fn handle_event<W: Write>(w: &mut EventWriter<W>, line: String) -> Result<()> {
-//     let line = line.trim();
-//     let event: XmlEvent = if line.starts_with("+") && line.len() > 1 {
-//         XmlEvent::start_element(&line[1..]).into()
-//     } else if line.starts_with("-") {
-//         XmlEvent::end_element().into()
-//     } else {
-//         XmlEvent::characters(&line).into()
-//     };
-//     w.write(event);
-// }
 
-// fn create_file(){
-//     let mut file = File::create("output.xml").unwrap();
 
-//     let mut input = io::stdin();
-//     let mut output = io::stdout();
-//     let mut writer = EmitterConfig::new().perform_indent(true).create_writer(&mut file);
-//     loop{
-//         print!("> "); output.flush().unwrap();
-//         let mut line = String::new();
-//         match input.read_line(&mut line){
-//             Ok(_) => {}
-//             Err(e)=> panic!("Write error: {}", e)
-//         },
-//         Err(e) => panic("Input error: {}", e)
-//     }
+fn xml_writing(){
+    let opt = Options {
+        use_single_quote: true,
+        ..Options::default()
+    };
+    
+    let mut w = XmlWriter::new(opt);
+    w.start_element("DiscoveryJob");
+    w.write_attribute("identifier", "DISCOVERY_JOB");
+    w.start_element("Description");
+    w.end_element();
+    w.start_element("Schedule");
+    w.write_attribute("runnow", "true");
+    w.start_element("DiscoveryOptionsList");
+    w.start_element("DiscoveryOptions");
+    w.start_element("MgmtProtocolList");
+    w.start_element("MgmtProtocol");
+    w.write_text("snmpv2c");
+    w.end_element();
+    w.end_element();
+    w.start_element("useNmap");
+    w.write_text("false");
+    w.end_element();
+    w.start_element("doNotManageDevices");
+    w.write_text("false");
+    w.end_element();
+    w.start_element("useLoopBackIp");
+    w.write_text("false");
+    w.end_element();
+    w.start_element("Timeout");
+    w.write_text("10");
+    w.end_element();
+    w.start_element("IPRangeList");
+    w.start_element("IPRange");
+    w.start_element("Start");
+    w.write_text_fmt({}, 4);
+}
