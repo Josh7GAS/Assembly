@@ -1,0 +1,46 @@
+As normas de segurança foram criadas para fornecer as melhores práticas, diretrizes e princípios gerais para a implementação de sua gestão para sua organização. Existem várias instituições pasrinizadoras reconhecidas nacionais e internacionais.
+
+	=>ISO - International Standardization Organization.
+	=>IEC - International Electrotechnical Comission.
+	=>ABNT - Associação Brasileira de Normas Técnicas.
+
+Nos EUA, na Década de 70, o departamento de defesa (DoD - Departament of Defense) que criou o documento intitulado "Security Control for Computer System", esse documento contem um conjunto de regras ficou conhecido como "The Orange Book" devido a cor da capa.	Depois foi feita uma adaptação para conter além de informações sobre sistemas operacionais, conter informações de redes de computadores e ficou conhecido como "Red Book". Hoje existem vários livros que compõem a série chamado de "Rainbow Books". https://en.wikipedia.org/wiki/Rainbow_Series
+
+No Reino Unido, nos anos 90, surgiram as normas BS(British Standard). Sendo que em 95 foi publicada a BS7799 que foi separada em dois documentos:
+
+	=>BS77991 - É a primeira parte da norma e foi implementado para definir "boas práticas" para segurança da informação.
+	=>BS77992 - Segunda parte da norma tinha como objetivo proporcionar a base para um criar um sitema de gestão da segurança da informação dentro das empresas.
+
+	=> A ISO/IEC 17799:2000 - É a versão internacional da BS7799, homologada pela ISO(International Standadization Organization).
+	=> A NBR ISO/IEC 17799:2001 - É a versão Brasileira resultante da "tradução" da norma ISO, homologada ABNT
+
+	Normas do International Stadardization Organization (ISO)
+
+		=> ISO 15408 - Foi criada e direcionada para a segurança lógica das aplicações bem como possui foco principal no desenvolvimento de aplicações seguras.
+		=> ISO 27000 - Visando reunir as diferents normas para segurança a ISO criou a série 27000.
+		=> ISO 27002:2005 - Padrão interncaional para a gestão de segurança da informação. Padrão que substituiu a ISO 17799:2005.
+		=> ISO 27003:2010 - Fornece orientação sobre a implementação de sistemas de informação de gestão de segurança, incluindo técnicas de segurança. Ele fornece instruções sobre como realizar um planejamento de um projeto SGSI em organizações de todos os tamanhos.
+		=> ISO 27004:2009 - Padrão referente aos mecanismos de medição e relatórios para um sistema de gestão de segurança da informação(SGSI).
+		=> ISO 27005:2008 - Gestão de Riscos de Segurança da informação: fornece diretrizes para o gerenciamento de informações de riscos de segurança da informação.z	      => ISO 27006:2011 - Estabelece requisitos para auditorias externas em um Sistema de Gerenciamento de Segurança da informação e certificação de sitemas de informação de gestão de segurança.
+		=> ISO 31000 - Norma que foi criada para tratar de assuntos relacionados à gestão de riscos.
+
+	Normas ABNT
+No Brasil as primeiras orientações quanto à segurança física em informatica foram definidas pelas normas técnicas NBR's.
+https://en.wikipedia.org/wiki/Rainbow_Series
+
+	=>NBR 1333, de 12/1990 – Controle de acesso físico a CPDs (Centro de Processamento de Dados).
+	=>NBR 1334, de 12/1990 – Critérios de segurança física para armazenamento de dados.
+	=>NBR 1335, de 07/1991 – Segurança física de microcomputadores e terminais em estações de trabalho.
+	=>NBR 10842 – Equipamentos para Tecnologia da Informação requisitos de Segurança.
+
+Outras Normas Importantes.
+
+	=>PCI (Payment Card Industry) – Define um padrão para o manuseio de dados de pagamentos para todos os comerciantes e fornecedores de serviços que lidam com armazenamento, transmissão ou processamento de dados de cartões de crédito.
+
+	=>SOX (Sarbannes-Oxley) – Legislação criada após os problemas apresentados nas contabilidades das empresas Enron e WorldCom dentre outras, e que afetava as empresas de comércio público dos Estados Unidos.
+
+	=>BASEL III ACCORD (BASILEIA III) – Começou fornecendo diretriz para o cálculo de riscos (de crédito, do mercado e operacionais) de um banco e visava deixar mais eficiente seus esforços para o gerenciamento dos seus riscos.
+
+	=>O ITIL (Information Technology Infrastructure Library) é o modelo de referência para gerenciamento de processos de TI mais aceito mundialmente. Atualmente se tornou a norma BS-15000, sendo anexo da ISO 9000:2000. Dentro dele existem itens específicos que abordam o assunto da Segurança da Informação, principalmente em planos de continuidade de negócios;
+
+	=>O COBIT (Control Objectives for Information and Related Technology) é um guia de boas práticas apresentado como framework e mapas de auditoria, conjunto de ferramentas de implementação e guia com técnicas de gerenciamento.

@@ -157,42 +157,6 @@ fn getting_network_address_and_broadcast_address(
 }
 //criar o arquivo xml e seguindo os padroes do arquivo do Douglas, segue modelo abaixo
 
-
-
 fn xml_writing(){
-    let opt = Options {
-        use_single_quote: true,
-        ..Options::default()
-    };
     
-    let mut w = XmlWriter::new(opt);
-    w.start_element("DiscoveryJob");
-    w.write_attribute("identifier", "DISCOVERY_JOB");
-    w.start_element("Description");
-    w.end_element();
-    w.start_element("Schedule");
-    w.write_attribute("runnow", "true");
-    w.start_element("DiscoveryOptionsList");
-    w.start_element("DiscoveryOptions");
-    w.start_element("MgmtProtocolList");
-    w.start_element("MgmtProtocol");
-    w.write_text("snmpv2c");
-    w.end_element();
-    w.end_element();
-    w.start_element("useNmap");
-    w.write_text("false");
-    w.end_element();
-    w.start_element("doNotManageDevices");
-    w.write_text("false");
-    w.end_element();
-    w.start_element("useLoopBackIp");
-    w.write_text("false");
-    w.end_element();
-    w.start_element("Timeout");
-    w.write_text("10");
-    w.end_element();
-    w.start_element("IPRangeList");
-    w.start_element("IPRange");
-    w.start_element("Start");
-    w.write_text_fmt({}, 4);
 }

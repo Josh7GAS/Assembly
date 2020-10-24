@@ -1,10 +1,8 @@
-#/bin/bash
+#!/bin/bash
 
 #this function is used to store the regex output in a array, called "MATCHVALUES[$COUNT]=$AUX";
 STORING_OUTPUT() {
     COUNT=0
-    FILE = arquivo.txt;
-    CREATE_FILE = 'cat /var/log/audit/audit.log.1 >> $FILE';
 
     for AUX in $(grep -P -o '(?x)((?<=\Kauid=)|(?<=\Kcomm="nom))[\S]+' audit.log.1); do
         MATCHVALUES[$COUNT]=$AUX

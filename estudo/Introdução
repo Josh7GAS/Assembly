@@ -1,0 +1,17 @@
+Segurança da Infomração é preservar dados e informações de valor para uma companhia e/ou para um individuo.
+
+são propriedades da SI (Segurança da Informação)
+
+-> Confiabilidade: É garantir como a informação estara disponivel apenas para pessoas autorizadas. Sendo a autetificação a principal forma de mantela, controlando e registrando acessos. Ela impõem limitações aos milhares de dados sigilosos que as pessoas possuem.
+
+-> Integridade: O príncipio da integridade refere-se a manutenção das condições iniciais das informações de acordo com a forma que foram produzidas e armazenadas. Ou seja, a informação mantém sua origem e ela não pode ser alterada, assim somente pessoas autorizadas poderão acessar e modificar os dados do sistema.
+
+Quando o processo é executado estrategicamente é possível utilizar ferramentas para recuperar as informações danificadas ou perdidas.
+
+-> Disponibilidade: Os dados precisam estar seguros e disponíveis a qualquer momento para serem acessados pelos usuários autorizados.
+
+Isto é em respeito a eficácia do sistema e do funcionamento da rede para que seja possível utilizar a informação quando necessário. Ela deve ser hospedada em um sistema a provas de falhas lógicas e redundantes.
+
+Na hora de gerar um relaório esses dados precisam estar facilmente disponibilzados para serem utilizados.
+
+-> Autenticidade: É o processo de documentar a  utilização de ua informação, se um usuário utilizou ou modificou algum documento, essa ação é modificada e documentada.
