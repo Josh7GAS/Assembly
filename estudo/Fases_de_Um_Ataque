@@ -1,0 +1,24 @@
+
+Coleta de Informações
+
+Os agentes criminosos identificam e coletam informações disponíveis publicamente sobre seus alvos para personalizar seuss ataques. Essa fase inicial visa obter informações coletadas podem variar desde aplicativos de negócios w softwares que uma empresa utiliza até sore as funçẽs e relacionamentos que existem no ambiente interno. Essa fase também utiliza técnicas de engenharia social, que avaliam eventos recentes, questões preocupações relacionadas ao trabalho e outras áreas de interesse par o alvo pretendido.
+
+Ponto de entrada.
+
+Os hackers podem utilizar métodods variados para se infiltrar na infraestrutura de um alvo. Os métodods mais comuns incluem e-mail personalizado de spear phishing, exploits de dia zero ou de software e técnicas de watering hole. Os atacantes também utilizam plataformas de mensagens instantâneas e redes sociais parra induzir alvos a clica em um link ou baixar malware. Eventualmente, conseguem estabelecer uma conexão com o alvo.
+
+Comunicação de Comando e Controle (C&C)
+
+Depois que a segurança foi violada, os agentes de ameaças se comunicam constantemente com o malware, para executar rotinas maliciosas ou coletar informações dentro da rede da empresa. Os atores maliciosos usam técnicas para esconder essa comunicação e manter seus movimentos sob controle.
+
+Movimento lateral. 
+
+Uma vez dentro da rede, os agentes de ameaças se movem lateralmente pela rede para buscar informações importantes ou infectar outros sistemas valiosos.
+
+Descoberta de ativos ou dados.
+
+Ativos ou dados valiosos são identificados e isolados para futura extração de dados. Os agentes de ameaças têm acesso a "territôrios" que contêm informações e ativos valiosos. Esse dados são então identificados e trasnferidos por meio de ferramentas com RATs (Tojans de Acesso Remoto) e ferramentas personalizadas e legitimas. Uma técnica possível usada neste estágio pode ser o envio de listas de arquivos em diretórios diferentes para que os invasores possam identificar o que é valioso.
+
+Extração de dados
+
+esse é o objetivo princiapl dos ataques direcionados. O objetivo de um ataque sempre é coletar informações importantes e transferi-las para um local controlado pelos invasores. A transferência desses dados pode ser realizada de forma rápida ou gradual. Os ataques direcioandos se esforçam para não serem detectados na rede, a fim deobter acesso às joias da coroa ou a dados empresariais que possam ter algum valor. Esse dados valiosos incluem propriedades intelectual, segredos comerciais e onformações de clientes. Além disso, os agentes de ameaças também poddem buscar outros dados confidenciasi, como documentos ultrasecretos de intituições goventamentais ou militres. Depois que um ataque direcionado foi bem-sucedido e atingiu o estágio de exfiltração de dados, não é difícil para os invasores extraírem os dados. Embora os ataques direcionados não sejam conhecidos por visarem especificamente os consumidores, seus dados também correm risco, uma vez que áreas de negócios de uma organização foram infiltrados. Como resultado, se forem bem-sucedidos, esses ataques podem prejudicar a reputação de uma empresa e causar prejuízos econômicos e financeiros relevantes.
