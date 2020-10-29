@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Escreva um commit"
+
+read COMMIT
+
+git add .
+git commit -m "$COMMIT"
+
+sudo shutdown now
+
