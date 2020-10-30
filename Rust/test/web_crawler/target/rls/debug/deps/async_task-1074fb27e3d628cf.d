@@ -1,0 +1,11 @@
+/home/josh7gas/github.com/Josh7GAS/Oficina/Rust/test/web_crawler/target/rls/debug/deps/async_task-1074fb27e3d628cf.rmeta: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/header.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/raw.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/runnable.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/state.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/task.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/utils.rs
+
+/home/josh7gas/github.com/Josh7GAS/Oficina/Rust/test/web_crawler/target/rls/debug/deps/async_task-1074fb27e3d628cf.d: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/header.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/raw.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/runnable.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/state.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/task.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/utils.rs
+
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/lib.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/header.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/raw.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/runnable.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/state.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/task.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-task-4.0.3/src/utils.rs:

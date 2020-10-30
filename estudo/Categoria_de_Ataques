@@ -1,0 +1,40 @@
+Virus 
+
+Um vírus de computador é o que a maioria das pessoa chama de programa de malware. Um vírus de computador modifica arquivos legítimos de tal forma que, quando o arquivo da vítima é executado, o vírus também é exeutado.
+
+Vírus de computador puros são incomuns hoje, abragendo menos de 10% de todos os ataques. Isso é uma coisa boa: os vírus são os únicos que "infectam" outros arquivos. Isso os torna particuralamente dificeis de limpar porque devem ser executados a partir do programa legítimo.
+
+Worms
+
+Os Worms existem há mais tempo do que os vírus. O e-mail os colocou na moda no fianl dos anos 90 e, por quase uma década, chegaram como anexos de mensagens. Uma pessoa abria um e-mail e toda a empresa estava infectada em pouco tempo.
+
+O traço distintivo do worn é que ele é auto-replicante. Por exemplo, o worm Iloveyou: quando foi lançado atingiu quase todos os usuárips de e-mail no mundo. sobrecarregou os sitemas de telefonia e derrubou redes de televisão.
+
+O que torna um worm eficaz tão devastador é sua capacidade de se espalhar sem ação do usuario final. Os vírus, ao contrario, exigem que um usuário final, pelo menos, o inicie.
+
+Trojan
+
+Os worms de computador foram substituidos por programas de malware de cavalos de Troia (Tojan Horse) como a arma preferida dos hackers. Eles se mascaram como programas legítimos, mas contêm instruções maliciosas.
+
+Geralmente, chegaram por e-mail ou são encaminhados aos usuários quando visitam sites infectados. O tipo de Trojan mais popular é o falso programa antivirus, que aparece e afirma que o usúario está infectado e então o orienta a executar um programa para limpar o PC.
+
+Os cavalos de Troia são díficies de defender por duas razões: são fáceis de escrever (os cibercriminosos rotineiramente produzem e promovem novos kits de infecção) e se espalham enganando os úsuarios finais.
+
+Ransware Programas de malware que criptografam os dados e os mantém como reféns à espera de uma recompensa por meio de criptomoeda têm sido uma grande porcentagem do malware nos últimos anos e ainda está em crescimento. O Ransware muitas vezes prejudica empresas, hospitais, departmanetos de policia e até cidade inteiras.
+
+A maioria dos programas de ransomware é de Trojans, o que significa que eles devem ser distribuidos por meio de engenharia social de algum tipo. Depois de executados ,procuram e criptografam os arquivos dos usuários em poucos minutos, embora alguns agora esteham adotando outra abordagem: ao observar o usuário por algumas horas antes de iniciar a rotina de criptografia, o administrador de malware pode descobrir exatamente quantode resgate a vítima pode pagar e também excluir ou criptografar outros backups supostamente seguros.
+O ransomware pode ser evitado como qualquer outro tipo de programa de malware, mas uma vez executado, pode ser difícil reverter os danos sem um backup válido e valido.
+
+Malware sem arquivo (Fireless)
+
+O malware sem arquivo não é uma categoria diferente de malware. Seus diferenciais, contudo incluem explorar e perseverar. O malware tradicional infecta novos sitemas usando o sitema de arquivos. O malware sem arquivo, que hoje inclui mais de 50% de todo o malware, não usa diretamente os arquivos ou o sistema de arquivos. Em vez disso, eles exploram e se propagam na memória apenas ou usam outros objetos do sistema operacional "sem arquvio", como chaves de registro, API's ou tarefas agendadas.
+
+Adware
+
+O adware tenta expor o úsuario final à publicidade indesejada e pontecialmente mal-intencionada. Um programa comum de adware pode rediricionar as pesquisas do navegador de umusário para páginas da web parecidas com outras promoções de produtos.
+
+Spyware
+
+Spyware é mais frequentement usado por pessoas que querem verificar as atividades de computador de seus entes queridos. Os programas de adware e spyware são geralmente os mais fáceis de remover, porque não são tão nocivos em suas intenções quanto outros tipos de malware.
+
+Uma preocupação muito maior do que o adware ou spyware real é o mecanismo usado para explorar o computador ou usuário, seja engenharia social, software sem patches ou uma dúzia de outras causas de exploração. Isso ocorreporque, embora as intenções de um programa de spyware ou adware não sejam tão mal-intencionais, como um trojan de acesso romoto backdoor, elas usam os mesmos métpdps para invadir.

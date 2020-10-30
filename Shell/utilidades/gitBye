@@ -9,6 +9,11 @@ git commit -m "$COMMIT"
 
 git push
 
+echo"
+
+
+
+"
 
 echo "Desligando Machina!!!"
 sudo shutdown now

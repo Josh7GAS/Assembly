@@ -1,0 +1,13 @@
+/home/josh7gas/github.com/Josh7GAS/Oficina/Rust/test/rust_crawler/target/rls/debug/deps/url-72124a77a935d2f0.rmeta: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/host.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/origin.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/parser.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/path_segments.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/query_encoding.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/slicing.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/form_urlencoded.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/quirks.rs
+
+/home/josh7gas/github.com/Josh7GAS/Oficina/Rust/test/rust_crawler/target/rls/debug/deps/url-72124a77a935d2f0.d: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/host.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/origin.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/parser.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/path_segments.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/query_encoding.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/slicing.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/form_urlencoded.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/quirks.rs
+
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/lib.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/host.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/origin.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/parser.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/path_segments.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/query_encoding.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/slicing.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/form_urlencoded.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.1.1/src/quirks.rs:

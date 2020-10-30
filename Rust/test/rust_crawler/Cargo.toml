@@ -1,0 +1,17 @@
+[package]
+name = "rust_crawler"
+version = "0.1.0"
+authors = ["josh7gas"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/Josh7GAS/Rust-Crawler"
+repository = "https://github.com/Josh7GAS/Rust-Crawler"
+keywords = ["cli", "crawler", "web-site"]
+categories = ["web tool"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.10", features = ["json", "blocking"] }
+select = "0.5.0"
+rayon = { version = "*" }

@@ -1,0 +1,11 @@
+/home/josh7gas/github.com/Josh7GAS/Oficina/Rust/test/web_crawler/target/rls/debug/deps/libasync_trait-c7987b6be5ebebc0.so: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/args.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/expand.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lifetime.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/parse.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/receiver.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/respan.rs
+
+/home/josh7gas/github.com/Josh7GAS/Oficina/Rust/test/web_crawler/target/rls/debug/deps/async_trait-c7987b6be5ebebc0.d: /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lib.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/args.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/expand.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lifetime.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/parse.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/receiver.rs /home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/respan.rs
+
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lib.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/args.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/expand.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lifetime.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/parse.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/receiver.rs:
+/home/josh7gas/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/respan.rs:

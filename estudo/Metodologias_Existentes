@@ -1,0 +1,41 @@
+NIST (National Institute of Standards and Technology)
+
+Esta metodologia específica como as diferentes técnicas devem ser utilizadas para que os testes sejam efutuados com precisão.
+
+Essa metodologia é dividida em algumas etapas:
+
+1. Testes de segurança e visão gral dos exames
+
+2. Revisão das técnicas
+
+3. Identificação do Alvo
+
+4. Técnicas de validação
+
+5. Planejamento de avaliações de segurança
+
+6. Execução de avaliação de segurança
+
+7. Atividades pós teste.
+
+Essa metodologia não pe tão detalhada do ponto de vista técnico como as demasi, mas fornece informações suficentes para a realização de um teste de penetração.
+
+ISSAF (Information Systems Security Assessment Framework)
+
+Essa metodologia é disponibilada pelo OISSG (Open Information Systems Security Group), é a mais volumosa metodologia disponível. Basicamente consite em três fases de estratégia: planejamento e preparação, avaliação e relatórios e limpeza.
+
+1. Sua abrangencia cobre quatro áreas:
+
+1. Segurança de Rede
+
+2. Segurança de Host
+
+3. Segurança de Aplicação
+
+4. Segurança de Banco de Dados
+
+OSSTMM (Open Web Application Security Project)
+
+Essa metodologia tem um foco maior em testes de aplicações web.
+
+O OWASP segue alguns principios para a execução dos testes: não acreditar em milagres, pensar estrategicamente, testar cedo e com regularidade, entender o escopo da segurança, desenvolver a mentalidade correta, estender o objetivo, usar as ferramentas corretas, se atentar aos detalhes e documentar os resultados.
