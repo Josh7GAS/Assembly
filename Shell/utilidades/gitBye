@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git status
+
 echo "Escreva um commit"
 
 read COMMIT
