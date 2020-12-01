@@ -1,5 +1,5 @@
 
-#PAsta e caminho da planilha
+#Pasta e caminho da planilha
 $caminhoArquivo = $( Read-Host  "Qual e o Path para a planilha" )
 
 $nomeDaPlanilha = $(Read-Host "Qual e o nome da planilha")
@@ -21,8 +21,6 @@ $WorkBook = $objExcel.Workbooks.Open($caminhoArquivo + "\" + $nomeDaPlanilha)
 $workSheet = $WorkBook.sheets.item($nomeAba)
 
 #$numLines = $workSheet.usedrange
-
-
 
 $rowsIp = New-Object System.Collections.ArrayList
 
