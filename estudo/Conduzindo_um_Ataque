@@ -1,0 +1,28 @@
+Processos para realização do Pentest
+
+	-> Preparo e Planejamento <-
+Neste primeiro momento é importante que os pentesterrs definam seud objetivos para o teste de intrusão ocorrer adequadamente. Se é para identificar vulnerabilidade na seguranla de sistemas técnicos ou incrementar a segurança da infraestrutura organizacional, é necessário que essas "missões" estejam bem definidas.
+
+Além disso é muito interessante fazer um termo de pré-compromisso entre o cliente o os realizadores do Pnetest. Assim, todos ficam alinhados acerca do objetivo e são minimizadas as falhas na comunicação.
+
+	-> Verificação  <-
+Na parte de verificação, é necessario que sejam coletadas informações preliminares sobre a estrutura. Isso inclui, por exemplo, endereços de IP, descrições de sistemas, aquitetura de rede, serviços públicos e privados, entre outros. É uma etapa muito importante, até porque determinará a forma e o tipo de Pentest.
+
+	-> Reconhecimento <-
+Nesta parte da análise, o hacker ético focará seus esforços na utilização de algumas das ferramentas de Pentest para analisar e reconhecer os ativos que são seu alvo. Assim, é o possível pré-visualizar potenciais fragilidades e descobrir ameaças em rede, servidores e serviços. Sendo assim, é importante que o pentester se coloque no lugar de um vibercriminoso e pense como ele para que sua estratégia seja efetiva.
+
+	-> Análise de Informação e Riscos <-
+Com o agrupamento e coleta de informações das etapas anteriores, este processo é um dos essenciais. Será bescando as possibilidades de sucesso na intrusão, assim como análise dos riscos que o processo enfrentará durante todo o procedimento. Como a estrutura de rede já passou pelo reconhecimento inicial, o usuário pode optar por fazer essa análise somente nos sistemas que já foram pré-visualizadas certas vulnerabilidades.
+
+	-> Tentativas de Intrusão <-
+Esta é uma dasetapas mais sensíveis e, por esse motivo, necessitam cuidades extras. Agora que já foram analisados os riscos e o potencial sucesso da intrusão, serão identificadas as vulnerabilidades e a extensão de cada fragilidade. É a intrusão propriamente dita - o ataque realizado pelo hacker ético.
+
+
+	-> Análise Final <-
+A análise final, também chamada de fase "pós-exploração", é quase como uma certificação dos resultados obtidos nas análises anteriores. Assim, quando a estrutura é fianlmente atacada e o pentester toma posse do sistema-alvo, o mesmo buscará por dados sensíveis que possam trazer prejuizos para organização.
+
+	-> Relatórios <-
+Para finalizar, o Pentest deve ser concluído por um relatório de todos os procedimentos. Isso inclui um resumo geral da operação, os detalhes de cada etapa, as informações coletadas e os resultados obtidos, além de dados sore os riscos encontrados es sugestões para incrementar a segurança corporativa.
+
+Diagnostico de Segurança não é teste de invasão, pois o Diagnóstico é produzido por uma ferramenta em específico
+
