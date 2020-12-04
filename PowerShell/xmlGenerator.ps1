@@ -54,10 +54,34 @@ $number_of_enable_network = $mask - $avaible_host
 #getting subnets
 $subnets = [math]::Pow(2, $number_of_enable_network)
 #getting the Hosts
-$hosts = [math]::Pow(2, $number_of_enable_hosts) - 2
+$hosts = [math]::Pow(2, $number_of_enable_hosts) - 2    
 
 Write-Host "IP: "$ip
 Write-Host "Mask: "$mask
 Write-Host "Mask Binary mode: " $binarry_array
 Write-Host "Number of subnets: "$subnets
 Write-Host "Number of hosts: "$hosts
+
+$octet1, $octe2, $octet3, $octet4 = $ip.Split(".")
+
+$octet1 = $octet1 -as [int64]
+
+$octet2 = $octet2 -as [int64]
+
+$octet3 = $octet3 -as [int64]
+
+$octet4 = $octet4 -as [int64]
+
+for ($couting_network = 0; $couting_network -le $subnets; $couting_network++) {
+    for ($couting_host = 0; $couting_host -lt $hosts; $couting_host++) {
+
+        $bound_of_octets = $octet1, ".", $octe2, ".", $octet3 + $couting_network, ".", 
+        $octet4 + $couting_host
+        $bound_of_octets = $bound_of_octets.ToString()
+
+        Write-Output $writing += '<IPRange><Start>' + $bound_of_octets
+        + '<\Start><End>' | Out-File -FilePath D:\Users\teste.xml
+    }
+    
+
+}
