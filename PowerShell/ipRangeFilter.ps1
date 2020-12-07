@@ -54,4 +54,6 @@ foreach ($ips in $rowsIp) {
 
 $newIpList = $newIpList | sort | Get-Unique
 
-Write-Host $newIpList "`n"
+Write-Output $newIpList "`n" | Out-File -FilePath D:\Users\output.csv
+
+Write-Host "Arquivo gerado na pasta D:\Users\output.csv"
