@@ -17,6 +17,8 @@ foreach ($input in $ip_addrees) {
 
 #getting $number_of_enable_host and the mask binary form
 $binarys_on_octec = 0
+$number_of_enable_hosts = 0
+
 for ($count = 0; $count -lt $bit_ip; $count++) {
     if ($binarys_on_octec -eq $byte) {
         $binarry_array[$count] = "."
@@ -48,13 +50,13 @@ elseif ($mask -le 23) {
 else {
     $number_of_enable_network = $mask - 24
 }
-$number_of_enable_network = $mask - $avaible_host
-
 
 #getting subnets
 $subnets = [math]::Pow(2, $number_of_enable_network)
+
 #getting the Hosts
 $hosts = [math]::Pow(2, $number_of_enable_hosts) - 2    
+Write-Host $number_of_enable_hosts
 
 Write-Host "IP: "$ip
 Write-Host "Mask: "$mask
@@ -72,16 +74,18 @@ $octet3 = $octet3 -as [int64]
 
 $octet4 = $octet4 -as [int64]
 
-for ($couting_network = 0; $couting_network -le $subnets; $couting_network++) {
+for ($couting_network = 0; $couting_network -lt $subnets; $couting_network++) {
     for ($couting_host = 0; $couting_host -lt $hosts; $couting_host++) {
 
-        $bound_of_octets = $octet1, ".", $octe2, ".", $octet3 + $couting_network, ".", 
-        $octet4 + $couting_host
+        $bound_of_octets = $octet1, ".", $octe2, ".", $couting_network, ".", $couting_host
         $bound_of_octets = $bound_of_octets.ToString()
 
-        Write-Output $writing += '<IPRange><Start>' + $bound_of_octets
-        + '<\Start><End>' | Out-File -FilePath D:\Users\teste.xml
+        Write-Host $bound_of_octets
+
+        #$writing += "<IPRange><Start>"
+
     }
-    
 
 }
+
+Write-Host $writing 
