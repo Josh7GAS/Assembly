@@ -56,7 +56,6 @@ $subnets = [math]::Pow(2, $number_of_enable_network)
 
 #getting the Hosts
 $hosts = [math]::Pow(2, $number_of_enable_hosts) - 2    
-Write-Host $number_of_enable_hosts
 
 Write-Host "IP: "$ip
 Write-Host "Mask: "$mask
@@ -66,26 +65,25 @@ Write-Host "Number of hosts: "$hosts
 
 $octet1, $octe2, $octet3, $octet4 = $ip.Split(".")
 
-$octet1 = $octet1 -as [int64]
+# $octet1 = $octet1 -as [int64]
 
-$octet2 = $octet2 -as [int64]
+# $octet2 = $octet2 -as [int64]
 
-$octet3 = $octet3 -as [int64]
+# $octet3 = $octet3 -as [int64]
 
-$octet4 = $octet4 -as [int64]
+# $octet4 = $octet4 -as [int64]
+
+$writing_the_xml_file = New-Object System.Collections.ArrayList
 
 for ($couting_network = 0; $couting_network -lt $subnets; $couting_network++) {
     for ($couting_host = 0; $couting_host -lt $hosts; $couting_host++) {
 
-        $bound_of_octets = $octet1, ".", $octe2, ".", $couting_network, ".", $couting_host
-        $bound_of_octets = $bound_of_octets.ToString()
+       $bound_of_octets = -join "<IPRange><Start>",$octet1, ".", $octe2, ".", $couting_network.ToString(), ".", $couting_host.ToString(), "</Start><End>"
 
-        Write-Host $bound_of_octets
-
-        #$writing += "<IPRange><Start>"
+        $writing_the_xml_file += $bound_of_octets
 
     }
 
 }
 
-Write-Host $writing 
+Write-Output $writing_the_xml_file | Out-File -FilePath D:\Users\teste.xml
