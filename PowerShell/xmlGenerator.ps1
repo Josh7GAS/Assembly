@@ -75,12 +75,12 @@ $octet1, $octe2, $octet3, $octet4 = $ip.Split(".")
 
 $writing_the_xml_file = New-Object System.Collections.ArrayList
 
-for ($couting_network = 0; $couting_network -lt $subnets; $couting_network++) {
-    for ($couting_host = 0; $couting_host -lt $hosts; $couting_host++) {
+for ($couting_network = 0; $couting_network -le 255; $couting_network++) {
+    for ($couting_host = 0; $couting_host -le 255; $couting_host++) {
 
-       $bound_of_octets = -join "<IPRange><Start>",$octet1, ".", $octe2, ".", $couting_network.ToString(), ".", $couting_host.ToString(), "</Start><End>"
+       $bound_of_octets = "<IPRange><Start>",$octet1, ".", $octe2, ".", $couting_network.ToString(), ".", $couting_host.ToString(), "</Start><End>"
 
-        $writing_the_xml_file += $bound_of_octets
+        $writing_the_xml_file += -join $bound_of_octets
 
     }
 
