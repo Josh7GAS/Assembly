@@ -3,6 +3,9 @@ $ip_addrees = $( Read-Host  "What is the IP Adreess, if have the mask also inser
 $bit_ip = 32
 $byte = 8
 $binarry_array = [Object[]]::new($bit_ip)
+$bound_of_octets_beg = New-Object System.Collections.ArrayList
+
+$bound_of_octets_end = New-Object System.Collections.ArrayList
 
 #separating ip from mask
 foreach ($input in $ip_addrees) {
@@ -64,6 +67,9 @@ Write-Host "Number of subnets: "$subnets
 Write-Host "Number of hosts: "$hosts
 
 $octet1, $octe2, $octet3, $octet4 = $ip.Split(".")
+$octet1end, $octe2end, $octet3end, $octet4end = $ip.Split(".")
+$octe2end = 0
+$octet3end = 63
 
 # $octet1 = $octet1 -as [int64]
 
@@ -75,31 +81,29 @@ $octet1, $octe2, $octet3, $octet4 = $ip.Split(".")
 
 $writing_the_xml_file = New-Object System.Collections.ArrayList
 
-$count_lines = 0
-
-
-for ($couting_network = 0; $couting_network -le 255; $couting_network++) {
-    for ($couting_host = 0; $couting_host -le 255; $couting_host++) {
-
-        $bound_of_octets = "<IPRange><Start>", $octet1, ".", $octe2, ".", $couting_network.ToString(), ".", $couting_host.ToString(), "</Start><End>"
-
-        $writing_the_xml_file += -join $bound_of_octets
-        if ($count_lines -lt $hosts) {
-            $count_lines++
-        }
-        else {
-            break
-        }     
+for ($octet2 = 0; $octet2 -le 255; $octet2 += 1) {
+    for ($octet3 = 0; $octet3 -le 255; $octet3 += 64) {
+       
+        
+        $bound_of_octets_beg += "<IPRange><Start>", "10.", $octet2.ToString(), ".", $octet3.ToString(), ".", "1"
+    
+    
+    
+        # if ($octet2 -eq 255) {
+        #     $octet2 = 0
+        # }
 
     }
-    if ($count_lines -lt $hosts) {
-        $count_lines++
-    }
-    else {
-        break
-    }   
-
 }
 
+for ($octe2end = 0; $octe2end -le 255; $octe2end += 1) {
+    for ($octet3end = 63; $octet3end -lt 255; $octet3end += 64) {
+        
+        $bound_of_octets_end += "</Start><End>", "10.", $octe2end, ".", $octet3end.ToString(), ".", "254", "</End></IpRange>"
+    }
+}
 
-Write-Output $writing_the_xml_file | Out-File -FilePath D:\Users\teste.xml
+#colocar um for looping para unir as listas
+$writing_the_xml_file += -join $bound_of_octets
+
+Write-Output $writing_the_xml_file | Out-File -FilePath D:\Users\teste1.xml
