@@ -81,7 +81,7 @@ for ($octet2 = 0; $octet2 -le 255; $octet2 += 1) {
     for ($octet3 = 0; $octet3 -le 255; $octet3 += 64) {
        
         
-        $bound_of_octets_beg1 += "<IPRange><Start>", "10.", $octet2.ToString(), ".", $octet3.ToString(), ".", "1"
+        $bound_of_octets_beg1 += -join "<IPRange><Start> 10." + $octet2.ToString() + "." + $octet3.ToString(), ". 1"
         $bound_of_octets_beg += -join $bound_of_octets_beg1
     
     
@@ -95,14 +95,14 @@ for ($octet2 = 0; $octet2 -le 255; $octet2 += 1) {
 for ($octe2end = 0; $octe2end -le 255; $octe2end += 1) {
     for ($octet3end = 63; $octet3end -le 255; $octet3end += 64) {
         
-        $bound_of_octets_end1 += "</Start><End>", "10.", $octe2end, ".", $octet3end.ToString(), ".", "254", "</End></IpRange>"
+        $bound_of_octets_end1 += "</Start><End> 10."+ $octe2end+ "."+ $octet3end.ToString(), ". 254 </End></IpRange>"
         $bound_of_octets_end += -join $bound_of_octets_end1
     }
 }
 
 $writing_the_xml_file = New-Object System.Collections.ArrayList
 
-foreach ($index in 0..$couting_both_list.Length) {
+foreach ($index in 0..$bound_of_octets_beg.Length) {
     $writing_the_xml_file += " "
 }
 
