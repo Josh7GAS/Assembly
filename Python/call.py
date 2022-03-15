@@ -4,8 +4,8 @@ from twilio.rest import Client
 account_sid = "AC64d8f879844f1c7048eaa8c84bd3f958"
 auth_token = "1ac721befb7213ffa037e60b48af95d6"
 
-numero_client = "+5511966112472"
-numero_server = "+12723597092"
+number_client = "+5511966112472"
+number_server = "+12723597092"
 
 client = Client(account_sid, auth_token)
 
@@ -18,7 +18,7 @@ Olá Senhora aqui é a Renner e gostariamos de notificar que seu nome está indo
 """
 
 call = client.calls.create(
-        to = numero_client,
-        from_ = numero_server,
+        to = number_client,
+        from_ = number_server,
         twiml = message
 )
